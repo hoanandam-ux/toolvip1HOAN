@@ -1,1647 +1,1224 @@
 <!DOCTYPE html>
+
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Giải Đề Tiếng Anh THPT 2026 – Global Success Unit 6,7,8</title>
-<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<title>Phân Tích Đề Tiếng Anh 11</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Fraunces:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #0d1117;
-    --surface: #161b22;
-    --surface2: #1c2128;
-    --border: #30363d;
-    --accent: #58a6ff;
-    --accent2: #3fb950;
-    --accent3: #f78166;
-    --accent4: #d2a8ff;
-    --accent5: #ffa657;
-    --text: #e6edf3;
-    --text2: #8b949e;
-    --text3: #c9d1d9;
-    --correct: #238636;
-    --correct-bg: #0f2d1a;
-    --correct-border: #2ea043;
-    --wrong-bg: #2d1010;
-    --wrong-border: #6e1a1a;
-    --highlight: #fffb8f22;
+    --bg: #0f0e0c;
+    --surface: #1a1916;
+    --card: #211f1c;
+    --border: #2e2b26;
+    --accent: #e8c547;
+    --accent2: #7ecba1;
+    --accent3: #e07b5a;
+    --text: #ede8df;
+    --muted: #8a8070;
+    --correct: #7ecba1;
+    --wrong: #e07b5a;
   }
 
-  * { box-sizing: border-box; margin: 0; padding: 0; }
+- { margin: 0; padding: 0; box-sizing: border-box; }
 
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: 'Be Vietnam Pro', sans-serif;
-    font-size: 15px;
-    line-height: 1.7;
-  }
+body {
+background: var(–bg);
+color: var(–text);
+font-family: ‘IBM Plex Mono’, monospace;
+min-height: 100vh;
+padding: 2rem 1rem;
+}
 
-  /* ===== HEADER ===== */
-  .hero {
-    background: linear-gradient(135deg, #0d1117 0%, #161b22 40%, #1a1f2e 100%);
-    border-bottom: 1px solid var(--border);
-    padding: 48px 24px 40px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-  }
-  .hero::before {
-    content: '';
-    position: absolute; inset: 0;
-    background: radial-gradient(ellipse at 30% 50%, #58a6ff0d 0%, transparent 60%),
-                radial-gradient(ellipse at 70% 50%, #3fb9500d 0%, transparent 60%);
-  }
-  .hero-badge {
-    display: inline-block;
-    background: linear-gradient(90deg, #58a6ff22, #3fb95022);
-    border: 1px solid #58a6ff44;
-    color: var(--accent);
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    padding: 4px 14px;
-    border-radius: 20px;
-    margin-bottom: 16px;
-  }
-  .hero h1 {
-    font-size: clamp(22px, 4vw, 36px);
-    font-weight: 800;
-    color: var(--text);
-    margin-bottom: 8px;
-    position: relative;
-  }
-  .hero h1 span { color: var(--accent); }
-  .hero-sub {
-    color: var(--text2);
-    font-size: 14px;
-    font-weight: 400;
-    position: relative;
-  }
-  .hero-stats {
-    display: flex;
-    justify-content: center;
-    gap: 32px;
-    margin-top: 28px;
-    flex-wrap: wrap;
-    position: relative;
-  }
-  .stat-item {
-    text-align: center;
-  }
-  .stat-num {
-    font-size: 28px;
-    font-weight: 800;
-    color: var(--accent);
-  }
-  .stat-label {
-    font-size: 12px;
-    color: var(--text2);
-    font-weight: 500;
-    letter-spacing: 0.5px;
-  }
+.page-header {
+text-align: center;
+margin-bottom: 3rem;
+padding-bottom: 2rem;
+border-bottom: 1px solid var(–border);
+}
 
-  /* ===== NAV ===== */
-  .toc {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: #0d1117ee;
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border);
-    padding: 0 24px;
-    overflow-x: auto;
-    white-space: nowrap;
-    scrollbar-width: none;
-  }
-  .toc::-webkit-scrollbar { display: none; }
-  .toc-inner {
-    display: inline-flex;
-    gap: 4px;
-    padding: 8px 0;
-  }
-  .toc a {
-    color: var(--text2);
-    text-decoration: none;
-    font-size: 12px;
-    font-weight: 600;
-    padding: 5px 12px;
-    border-radius: 6px;
-    transition: all .2s;
-    white-space: nowrap;
-  }
-  .toc a:hover { background: var(--surface2); color: var(--accent); }
+.page-header h1 {
+font-family: ‘Fraunces’, serif;
+font-size: clamp(1.8rem, 5vw, 3rem);
+font-weight: 700;
+color: var(–accent);
+letter-spacing: -0.02em;
+line-height: 1.1;
+}
 
-  /* ===== LAYOUT ===== */
-  .container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 32px 20px 80px;
-  }
+.page-header p {
+color: var(–muted);
+font-size: 0.8rem;
+margin-top: 0.5rem;
+letter-spacing: 0.1em;
+text-transform: uppercase;
+}
 
-  /* ===== SECTION HEADER ===== */
-  .section-header {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin: 48px 0 24px;
-    padding-bottom: 12px;
-    border-bottom: 1px solid var(--border);
-  }
-  .section-icon {
-    width: 36px; height: 36px;
-    border-radius: 8px;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 18px;
-    flex-shrink: 0;
-  }
-  .icon-blue { background: #58a6ff1a; }
-  .icon-green { background: #3fb9501a; }
-  .icon-purple { background: #d2a8ff1a; }
-  .icon-orange { background: #ffa6571a; }
-  .section-title {
-    font-size: 18px;
-    font-weight: 700;
-    color: var(--text);
-  }
-  .section-sub {
-    font-size: 12px;
-    color: var(--text2);
-    font-weight: 400;
-    margin-top: 2px;
-  }
+.section-header {
+display: flex;
+align-items: center;
+gap: 1rem;
+margin: 2.5rem 0 1.5rem;
+padding: 1rem 1.5rem;
+background: var(–surface);
+border-left: 3px solid var(–accent);
+}
 
-  /* ===== PASSAGE BOX ===== */
-  .passage-box {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 20px 24px;
-    margin-bottom: 24px;
-    font-size: 13.5px;
-    line-height: 1.8;
-    color: var(--text3);
-  }
-  .passage-box p { margin-bottom: 10px; }
-  .passage-box p:last-child { margin-bottom: 0; }
-  .passage-title {
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: 12px;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-  }
-  .passage-title::after {
-    content: '';
-    flex: 1;
-    height: 1px;
-    background: var(--border);
-  }
-  .highlight-word {
-    background: #58a6ff22;
-    color: var(--accent);
-    border-radius: 3px;
-    padding: 0 3px;
-    font-weight: 600;
-  }
+.section-header h2 {
+font-family: ‘Fraunces’, serif;
+font-size: 1.1rem;
+color: var(–accent);
+font-weight: 300;
+font-style: italic;
+}
 
-  /* ===== QUESTION CARD ===== */
-  .q-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    margin-bottom: 16px;
-    overflow: hidden;
-    transition: border-color .2s;
-  }
-  .q-card:hover { border-color: #58a6ff44; }
+.section-header .badge {
+font-size: 0.65rem;
+background: var(–accent);
+color: var(–bg);
+padding: 0.2rem 0.6rem;
+letter-spacing: 0.1em;
+text-transform: uppercase;
+font-weight: 600;
+}
 
-  .q-header {
-    display: flex;
-    align-items: flex-start;
-    gap: 14px;
-    padding: 16px 20px;
-    cursor: pointer;
-    user-select: none;
-  }
-  .q-num {
-    background: var(--accent);
-    color: #000;
-    font-size: 12px;
-    font-weight: 800;
-    border-radius: 6px;
-    padding: 3px 9px;
-    flex-shrink: 0;
-    margin-top: 2px;
-    font-family: 'JetBrains Mono', monospace;
-  }
-  .q-num.fill { background: var(--accent5); }
-  .q-num.arrange { background: var(--accent4); color: #000; }
+.passage-box {
+background: var(–surface);
+border: 1px solid var(–border);
+border-left: 3px solid var(–accent2);
+padding: 1.5rem;
+margin-bottom: 2rem;
+font-size: 0.82rem;
+line-height: 1.9;
+color: #c4bdb0;
+}
 
-  .q-text { flex: 1; }
-  .q-en {
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--text);
-    margin-bottom: 4px;
-  }
-  .q-vi {
-    font-size: 12.5px;
-    color: var(--text2);
-    font-style: italic;
-  }
+.passage-box strong {
+color: var(–accent2);
+}
 
-  .q-toggle {
-    color: var(--text2);
-    font-size: 18px;
-    flex-shrink: 0;
-    transition: transform .3s;
-    margin-top: 2px;
-  }
-  .q-card.open .q-toggle { transform: rotate(180deg); }
+.blank {
+display: inline-block;
+background: rgba(232,197,71,0.1);
+border-bottom: 2px solid var(–accent);
+color: var(–accent);
+padding: 0 0.3rem;
+font-weight: 600;
+min-width: 2rem;
+text-align: center;
+}
 
-  /* ===== OPTIONS ===== */
-  .q-body {
-    display: none;
-    padding: 0 20px 20px;
-    border-top: 1px solid var(--border);
-  }
-  .q-card.open .q-body { display: block; }
+.question-card {
+background: var(–card);
+border: 1px solid var(–border);
+margin-bottom: 1.5rem;
+overflow: hidden;
+transition: border-color 0.2s;
+}
 
-  .options-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
-    margin-top: 14px;
-    margin-bottom: 14px;
-  }
-  @media (max-width: 600px) { .options-grid { grid-template-columns: 1fr; } }
+.question-card:hover {
+border-color: var(–accent);
+}
 
-  .opt {
-    display: flex;
-    gap: 10px;
-    padding: 10px 14px;
-    border-radius: 8px;
-    border: 1px solid var(--border);
-    background: var(--surface2);
-    transition: all .2s;
-  }
-  .opt.correct {
-    background: var(--correct-bg);
-    border-color: var(--correct-border);
-  }
-  .opt.wrong {
-    background: var(--wrong-bg);
-    border-color: var(--wrong-border);
-    opacity: 0.6;
-  }
-  .opt-label {
-    font-weight: 800;
-    font-size: 13px;
-    font-family: 'JetBrains Mono', monospace;
-    flex-shrink: 0;
-    width: 18px;
-  }
-  .opt.correct .opt-label { color: var(--accent2); }
-  .opt.wrong .opt-label { color: var(--accent3); }
-  .opt-content { flex: 1; }
-  .opt-en { font-size: 13px; color: var(--text3); font-weight: 500; }
-  .opt-vi { font-size: 12px; color: var(--text2); margin-top: 2px; font-style: italic; }
-  .opt.correct .opt-en { color: #56d364; font-weight: 600; }
+.q-header {
+display: flex;
+align-items: flex-start;
+gap: 1rem;
+padding: 1.2rem 1.5rem;
+background: var(–surface);
+border-bottom: 1px solid var(–border);
+}
 
-  /* ===== ANSWER BOX ===== */
-  .answer-box {
-    background: var(--correct-bg);
-    border: 1px solid var(--correct-border);
-    border-radius: 8px;
-    padding: 12px 16px;
-    margin-top: 8px;
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-  }
-  .answer-icon { font-size: 16px; flex-shrink: 0; margin-top: 1px; }
-  .answer-text { font-size: 13px; line-height: 1.6; color: var(--text3); }
-  .answer-text strong { color: #56d364; }
+.q-num {
+font-size: 0.65rem;
+font-weight: 600;
+letter-spacing: 0.15em;
+color: var(–bg);
+background: var(–accent);
+padding: 0.3rem 0.6rem;
+white-space: nowrap;
+flex-shrink: 0;
+}
 
-  /* ===== FILL IN BLANK ===== */
-  .fill-answer {
-    background: #ffa65711;
-    border: 1px solid #ffa65744;
-    border-radius: 8px;
-    padding: 12px 16px;
-    margin-top: 8px;
-  }
-  .fill-answer .ans-label {
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: var(--accent5);
-    margin-bottom: 6px;
-  }
-  .fill-answer .ans-val {
-    font-size: 16px;
-    font-weight: 800;
-    color: var(--accent5);
-    font-family: 'JetBrains Mono', monospace;
-  }
-  .fill-answer .ans-explain {
-    font-size: 12.5px;
-    color: var(--text2);
-    margin-top: 6px;
-    line-height: 1.6;
-  }
+.q-context {
+font-size: 0.78rem;
+color: var(–muted);
+line-height: 1.6;
+font-style: italic;
+}
 
-  /* ===== ARRANGE SECTION ===== */
-  .arrange-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    margin-bottom: 12px;
-    overflow: hidden;
-  }
-  .arrange-header {
-    display: flex;
-    align-items: flex-start;
-    gap: 14px;
-    padding: 14px 20px;
-    cursor: pointer;
-  }
-  .arrange-body {
-    display: none;
-    padding: 0 20px 16px;
-    border-top: 1px solid var(--border);
-  }
-  .arrange-card.open .arrange-body { display: block; }
-  .arrange-card.open .q-toggle { transform: rotate(180deg); }
+.q-context em {
+color: var(–accent);
+font-style: normal;
+font-weight: 600;
+}
 
-  .utterances {
-    margin-top: 12px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-  .utterance {
-    background: var(--surface2);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 10px 14px;
-    display: flex;
-    gap: 10px;
-    align-items: flex-start;
-  }
-  .utt-label {
-    font-size: 12px;
-    font-weight: 700;
-    font-family: 'JetBrains Mono', monospace;
-    color: var(--accent4);
-    flex-shrink: 0;
-    min-width: 16px;
-    margin-top: 1px;
-  }
-  .utt-en { font-size: 13px; color: var(--text3); }
-  .utt-vi { font-size: 12px; color: var(--text2); font-style: italic; margin-top: 2px; }
-  .correct-order {
-    margin-top: 12px;
-    background: var(--correct-bg);
-    border: 1px solid var(--correct-border);
-    border-radius: 8px;
-    padding: 10px 14px;
-    font-size: 13px;
-  }
-  .correct-order .co-label {
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: var(--accent2);
-    margin-bottom: 4px;
-  }
-  .correct-order .co-val {
-    font-size: 18px;
-    font-weight: 800;
-    font-family: 'JetBrains Mono', monospace;
-    color: #56d364;
-    letter-spacing: 6px;
-  }
+.tip-row {
+padding: 0.8rem 1.5rem;
+background: rgba(126,203,161,0.06);
+border-bottom: 1px solid var(–border);
+font-size: 0.72rem;
+color: var(–accent2);
+display: flex;
+align-items: center;
+gap: 0.5rem;
+}
 
-  /* ===== SUMMARY TABLE ===== */
-  .summary-table {
-    width: 100%;
-    border-collapse: collapse;
-    border-radius: 12px;
-    overflow: hidden;
-    margin-top: 16px;
-  }
-  .summary-table th {
-    background: var(--surface2);
-    padding: 10px 14px;
-    text-align: left;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    color: var(--text2);
-    border-bottom: 1px solid var(--border);
-  }
-  .summary-table td {
-    padding: 10px 14px;
-    font-size: 13px;
-    border-bottom: 1px solid var(--border);
-    background: var(--surface);
-  }
-  .summary-table tr:last-child td { border-bottom: none; }
-  .ans-tag {
-    display: inline-block;
-    background: var(--accent);
-    color: #000;
-    font-weight: 800;
-    font-size: 12px;
-    font-family: 'JetBrains Mono', monospace;
-    padding: 2px 8px;
-    border-radius: 4px;
-  }
-  .ans-tag.green { background: var(--accent2); }
-  .ans-tag.orange { background: var(--accent5); }
-  .ans-tag.purple { background: var(--accent4); }
+.tip-row::before {
+content: ‘→’;
+font-weight: 700;
+}
 
-  /* ===== DIVIDER ===== */
-  .divider {
-    height: 1px;
-    background: linear-gradient(90deg, transparent, var(--border), transparent);
-    margin: 40px 0;
-  }
+.options-grid {
+padding: 1.2rem 1.5rem;
+display: grid;
+gap: 0.6rem;
+}
 
-  /* ===== FOOTER ===== */
-  .footer {
-    text-align: center;
-    padding: 32px 20px;
-    color: var(--text2);
-    font-size: 12px;
-    border-top: 1px solid var(--border);
-  }
+.option {
+display: grid;
+grid-template-columns: 2rem 1fr auto;
+gap: 0.8rem;
+align-items: start;
+padding: 0.8rem;
+border: 1px solid transparent;
+font-size: 0.78rem;
+line-height: 1.5;
+transition: all 0.15s;
+}
 
-  /* ===== EXPAND ALL ===== */
-  .ctrl-bar {
-    display: flex;
-    gap: 8px;
-    margin-bottom: 16px;
-    flex-wrap: wrap;
-  }
-  .btn {
-    background: var(--surface2);
-    border: 1px solid var(--border);
-    color: var(--text3);
-    font-size: 12px;
-    font-weight: 600;
-    padding: 6px 14px;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: all .2s;
-    font-family: 'Be Vietnam Pro', sans-serif;
-  }
-  .btn:hover { background: var(--surface); border-color: var(--accent); color: var(--accent); }
-  .btn.active { background: #58a6ff22; border-color: var(--accent); color: var(--accent); }
+.option.correct {
+background: rgba(126,203,161,0.08);
+border-color: rgba(126,203,161,0.3);
+}
 
-  /* ===== INLINE CODE ===== */
-  code {
-    font-family: 'JetBrains Mono', monospace;
-    background: var(--surface2);
-    padding: 1px 6px;
-    border-radius: 4px;
-    font-size: 12.5px;
-    color: var(--accent5);
-  }
+.option.wrong {
+background: rgba(224,123,90,0.06);
+border-color: rgba(224,123,90,0.2);
+opacity: 0.7;
+}
 
-  /* ===== TIP BOX ===== */
-  .tip-box {
-    background: #d2a8ff11;
-    border: 1px solid #d2a8ff33;
-    border-radius: 8px;
-    padding: 12px 16px;
-    margin-top: 10px;
-    font-size: 12.5px;
-    color: var(--text2);
-    line-height: 1.6;
-  }
-  .tip-box .tip-title {
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: var(--accent4);
-    margin-bottom: 4px;
-  }
+.opt-letter {
+font-weight: 600;
+font-size: 0.72rem;
+color: var(–muted);
+text-align: center;
+}
 
-  /* scroll smooth */
-  html { scroll-behavior: smooth; }
+.option.correct .opt-letter {
+color: var(–correct);
+}
+
+.option.wrong .opt-letter {
+color: var(–wrong);
+}
+
+.opt-text {
+color: #bbb4a8;
+}
+
+.opt-viet {
+font-size: 0.68rem;
+color: var(–muted);
+font-style: italic;
+margin-top: 0.15rem;
+}
+
+.opt-tag {
+font-size: 0.6rem;
+padding: 0.15rem 0.5rem;
+letter-spacing: 0.08em;
+text-transform: uppercase;
+white-space: nowrap;
+height: fit-content;
+margin-top: 0.1rem;
+}
+
+.tag-correct {
+background: rgba(126,203,161,0.15);
+color: var(–correct);
+border: 1px solid rgba(126,203,161,0.4);
+}
+
+.tag-wrong {
+background: rgba(224,123,90,0.1);
+color: var(–wrong);
+border: 1px solid rgba(224,123,90,0.3);
+}
+
+.reason-box {
+margin: 0 1.5rem 1.5rem;
+padding: 0.9rem 1rem;
+background: rgba(232,197,71,0.05);
+border-left: 2px solid var(–accent);
+font-size: 0.73rem;
+line-height: 1.7;
+color: #a09480;
+}
+
+.reason-box strong {
+color: var(–accent);
+display: block;
+margin-bottom: 0.3rem;
+font-size: 0.65rem;
+letter-spacing: 0.1em;
+text-transform: uppercase;
+}
+
+.grammar-pill {
+display: inline-block;
+background: rgba(126,203,161,0.1);
+border: 1px solid rgba(126,203,161,0.25);
+color: var(–accent2);
+font-size: 0.62rem;
+padding: 0.15rem 0.5rem;
+margin: 0.2rem 0.15rem 0;
+letter-spacing: 0.05em;
+}
+
+.ordering-q .q-header {
+border-left: 3px solid var(–accent3);
+}
+
+.ordering-q .q-num {
+background: var(–accent3);
+}
+
+.sentences-list {
+padding: 1rem 1.5rem;
+display: grid;
+gap: 0.5rem;
+border-bottom: 1px solid var(–border);
+}
+
+.sentence-item {
+font-size: 0.76rem;
+line-height: 1.6;
+color: #bbb4a8;
+padding: 0.5rem 0.7rem;
+border-left: 2px solid var(–border);
+}
+
+.sentence-item .s-label {
+color: var(–accent3);
+font-weight: 600;
+margin-right: 0.4rem;
+}
+
+.order-options {
+padding: 1rem 1.5rem;
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 0.5rem;
+}
+
+@media (max-width: 500px) {
+.order-options { grid-template-columns: 1fr; }
+}
+
+.order-opt {
+padding: 0.6rem 0.8rem;
+font-size: 0.72rem;
+border: 1px solid var(–border);
+color: var(–muted);
+letter-spacing: 0.04em;
+transition: all 0.15s;
+}
+
+.order-opt.correct {
+border-color: rgba(126,203,161,0.4);
+background: rgba(126,203,161,0.08);
+color: var(–correct);
+}
+
+.order-opt.wrong {
+opacity: 0.5;
+}
+
+.toc {
+background: var(–surface);
+border: 1px solid var(–border);
+padding: 1.5rem;
+margin-bottom: 2.5rem;
+}
+
+.toc h3 {
+font-size: 0.65rem;
+letter-spacing: 0.15em;
+text-transform: uppercase;
+color: var(–muted);
+margin-bottom: 1rem;
+}
+
+.toc-grid {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+gap: 0.5rem;
+}
+
+.toc-item {
+font-size: 0.7rem;
+padding: 0.4rem 0.7rem;
+background: var(–card);
+border: 1px solid var(–border);
+color: var(–muted);
+cursor: pointer;
+transition: all 0.15s;
+text-decoration: none;
+}
+
+.toc-item:hover {
+border-color: var(–accent);
+color: var(–accent);
+}
+
+.divider {
+border: none;
+border-top: 1px solid var(–border);
+margin: 2.5rem 0;
+}
+
+.max-w {
+max-width: 860px;
+margin: 0 auto;
+}
 </style>
+
 </head>
 <body>
+<div class="max-w">
 
-<!-- HERO -->
-<div class="hero">
-  <div class="hero-badge">ĐỀ THI THỬ TỐT NGHIỆP THPT NĂM 2026</div>
-  <h1>MÔN TIẾNG ANH – <span>Global Success</span></h1>
-  <p class="hero-sub">Chương trình: Global Success | Units 6, 7, 8 · Thời gian: 50 phút · Giải chi tiết + dịch đầy đủ</p>
-  <div class="hero-stats">
-    <div class="stat-item"><div class="stat-num">40</div><div class="stat-label">Câu hỏi</div></div>
-    <div class="stat-item"><div class="stat-num">5</div><div class="stat-label">Dạng bài</div></div>
-    <div class="stat-item"><div class="stat-num">8</div><div class="stat-label">Trang đề</div></div>
-  </div>
+  <header class="page-header">
+    <h1>Phân Tích Đề Tiếng Anh 11</h1>
+    <p>Global Success · Cấu trúc ngữ pháp · Dịch nghĩa · Lý do chọn đáp án</p>
+  </header>
+
+  <nav class="toc">
+    <h3>Mục lục nhanh</h3>
+    <div class="toc-grid">
+      <a class="toc-item" href="#s1">▸ Q1–6 · Leaflet (Trường nghề)</a>
+      <a class="toc-item" href="#s2">▸ Q7–12 · News (Thành cổ)</a>
+      <a class="toc-item" href="#s3">▸ Q13–17 · Sắp xếp câu</a>
+      <a class="toc-item" href="#s4">▸ Q18–22 · Passage (Gap year)</a>
+    </div>
+  </nav>
+
+  <!-- ======================== SECTION 1 ======================== -->
+
+  <div id="s1">
+    <div class="section-header">
+      <span class="badge">Fill in blank</span>
+      <h2>Câu 1–6 · Tờ rơi: Why Choose Vocational Schools?</h2>
+    </div>
+
+```
+<div class="passage-box">
+  <strong>Đoạn văn (dịch):</strong> Bạn có đang phân vân về con đường học tập sau THPT? Trường nghề là lựa chọn thay thế tuyệt vời cho đại học truyền thống.
+  <span class="blank">(1)</span>, nhiều học sinh vẫn cho rằng bằng cử nhân là lựa chọn duy nhất. Trường nghề trang bị kỹ năng thực tiễn
+  <span class="blank">(2)</span> được các nhà tuyển dụng đánh giá rất cao. Bạn còn tiết kiệm được một khoản
+  <span class="blank">(3)</span> tiền so với học phí đại học đắt đỏ. Điều <span class="blank">(4)</span> là hãy cân nhắc sở thích và điểm mạnh của bản thân. Đừng ngại hỏi bố mẹ hoặc thầy cô
+  <span class="blank">(5)</span> lời khuyên. Hãy chọn con đường giúp bạn <span class="blank">(6)</span> mục tiêu nghề nghiệp nhanh chóng và tự tin!
 </div>
 
-<!-- NAV -->
-<nav class="toc">
-  <div class="toc-inner">
-    <a href="#part1">📖 Phần 1: Reading (Q1–8)</a>
-    <a href="#part2">📚 Phần 2: Reading 2 (Q19–29)</a>
-    <a href="#part3">🔤 Phần 3: Sắp xếp (Q15–18)</a>
-    <a href="#part4">✏️ Phần 4: Điền từ (Q9–14, Q30–40)</a>
-    <a href="#summary">📊 Bảng đáp án</a>
+<!-- Q1 -->
+<div class="question-card" id="q1">
+  <div class="q-header">
+    <span class="q-num">Q·01</span>
+    <div class="q-context">Vị trí: đầu câu, nối với ý <em>đối lập</em> trước đó → cần <em>liên từ tương phản</em></div>
   </div>
-</nav>
-
-<div class="container">
-
-<!-- ===== PHẦN 1: READING – BECOMING INDEPENDENT ===== -->
-<div id="part1">
-  <div class="section-header">
-    <div class="section-icon icon-blue">📖</div>
-    <div>
-      <div class="section-title">Phần 1 – Đọc hiểu: Becoming Independent (Câu 1–8)</div>
-      <div class="section-sub">Chủ đề Unit 8: Trở nên tự lập – Công nghệ hỗ trợ giới trẻ</div>
+  <div class="tip-row">Ý trước: Trường nghề rất tốt. Ý sau: nhiều HS vẫn nghĩ chỉ đại học mới là lựa chọn. → Tương phản!</div>
+  <div class="options-grid">
+    <div class="option wrong">
+      <span class="opt-letter">A</span>
+      <div><div class="opt-text">However</div><div class="opt-viet">Tuy nhiên — ✓ tương phản, nhưng không phù hợp vị trí</div></div>
+      <span class="opt-tag tag-wrong">Loại</span>
     </div>
-  </div>
-
-  <div class="passage-box">
-    <div class="passage-title">📄 Bài đọc gốc – Becoming Independent</div>
-    <p>When teenagers transition into independent young adults, they use digital tools to make that process far more effective. Budgeting apps, online planners, and habit trackers build a live, shared picture of their daily routines, financial shifts, and personal growth. Because they have access to their own data, teenagers can settle their study schedules, determine when to save money, and track their expenses in real time. What once depended on parents' guidance is now driven by verifiable information.</p>
-    <p>With smart technology, teens can accurately map out their daily activities and create customised learning plans. Habit-tracking apps change their reminders on the fly, digital calendars send alerts on targeted tasks, and smart banking apps apply savings only where the user shows a need. <u>Because teenagers direct their focus exactly where it helps, their self-confidence rises while reliance on parents falls.</u> Studies report considerable savings on time, money, and energy – benefits that young adults enjoy at the month's end.</p>
-    <p>Time management is just as precise. Specialised software tracks screen time every hour, and productivity apps predict periods of high distraction. Automated blockers deliver measured restrictions to social media and stop when a study session is coming, slashing wasted hours and mental stress. The result is steadier academic performance in difficult years, fewer missed deadlines, and a smaller burden for the whole family. Smart scheduling also helps limit procrastination, reducing anxiety.</p>
-    <p>The journey from dependence to self-reliance is equally digital. Cloud platforms record household chores, completed assignments, and saved allowances the moment they change, so teenagers can reflect on it. Analytic tools browse the records to indicate weak points in their routine, forecast future expenses, and suggest better time-management plans for the next week to the users. This makes becoming independent both achievable and sustainable.</p>
-  </div>
-
-  <!-- Q1 -->
-  <div class="q-card" id="q1">
-    <div class="q-header" onclick="toggle(this)">
-      <div class="q-num">Q1</div>
-      <div class="q-text">
-        <div class="q-en">The word <strong>settle</strong> in paragraph 1 mostly means ___</div>
-        <div class="q-vi">Từ <strong>"settle"</strong> trong đoạn 1 chủ yếu có nghĩa là ___</div>
-      </div>
-      <div class="q-toggle">⌄</div>
+    <div class="option wrong">
+      <span class="opt-letter">B</span>
+      <div><div class="opt-text">Therefore</div><div class="opt-viet">Do đó — chỉ kết quả, không tương phản</div></div>
+      <span class="opt-tag tag-wrong">Loại</span>
     </div>
-    <div class="q-body">
-      <div class="options-grid">
-        <div class="opt wrong"><span class="opt-label">A</span><div class="opt-content"><div class="opt-en">exchange</div><div class="opt-vi">trao đổi</div></div></div>
-        <div class="opt wrong"><span class="opt-label">B</span><div class="opt-content"><div class="opt-en">announce</div><div class="opt-vi">thông báo</div></div></div>
-        <div class="opt wrong"><span class="opt-label">C</span><div class="opt-content"><div class="opt-en">expect</div><div class="opt-vi">mong đợi</div></div></div>
-        <div class="opt correct"><span class="opt-label">D</span><div class="opt-content"><div class="opt-en">decide ✓</div><div class="opt-vi">quyết định, sắp xếp</div></div></div>
-      </div>
-      <div class="answer-box">
-        <div class="answer-icon">✅</div>
-        <div class="answer-text"><strong>Đáp án: D – decide (quyết định/sắp xếp)</strong><br>
-        Trong câu "teenagers can <em>settle</em> their study schedules", từ "settle" mang nghĩa <em>sắp xếp, quyết định</em> lịch học. Đây là nghĩa phổ biến của "settle" khi dùng với danh từ chỉ kế hoạch/lịch trình.</div>
-      </div>
+    <div class="option wrong">
+      <span class="opt-letter">C</span>
+      <div><div class="opt-text">Because</div><div class="opt-viet">Bởi vì — chỉ nguyên nhân</div></div>
+      <span class="opt-tag tag-wrong">Loại</span>
+    </div>
+    <div class="option correct">
+      <span class="opt-letter">D</span>
+      <div><div class="opt-text">Although</div><div class="opt-viet">Mặc dù — tương phản, dùng đầu câu được</div></div>
+      <span class="opt-tag tag-correct">✓ Đáp án</span>
     </div>
   </div>
-
-  <!-- Q2 -->
-  <div class="q-card" id="q2">
-    <div class="q-header" onclick="toggle(this)">
-      <div class="q-num">Q2</div>
-      <div class="q-text">
-        <div class="q-en">Which of the following is NOT mentioned in paragraph 1 as information displayed on a live, shared picture?</div>
-        <div class="q-vi">Điều nào sau đây KHÔNG được đề cập trong đoạn 1 như thông tin hiển thị trên "bức tranh chung theo thời gian thực"?</div>
-      </div>
-      <div class="q-toggle">⌄</div>
-    </div>
-    <div class="q-body">
-      <div class="options-grid">
-        <div class="opt wrong"><span class="opt-label">A</span><div class="opt-content"><div class="opt-en">financial shifts</div><div class="opt-vi">những thay đổi về tài chính</div></div></div>
-        <div class="opt wrong"><span class="opt-label">B</span><div class="opt-content"><div class="opt-en">daily routines</div><div class="opt-vi">thói quen hằng ngày</div></div></div>
-        <div class="opt wrong"><span class="opt-label">C</span><div class="opt-content"><div class="opt-en">personal growth</div><div class="opt-vi">sự phát triển cá nhân</div></div></div>
-        <div class="opt correct"><span class="opt-label">D</span><div class="opt-content"><div class="opt-en">tasks important daily ✓</div><div class="opt-vi">các nhiệm vụ quan trọng hằng ngày</div></div></div>
-      </div>
-      <div class="answer-box">
-        <div class="answer-icon">✅</div>
-        <div class="answer-text"><strong>Đáp án: D</strong><br>
-        Đoạn 1 chỉ đề cập "daily routines, financial shifts, and personal growth" là ba thứ hiển thị. "Tasks important daily" không được nhắc tới → D là đáp án đúng.</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Q3 -->
-  <div class="q-card" id="q3">
-    <div class="q-header" onclick="toggle(this)">
-      <div class="q-num">Q3</div>
-      <div class="q-text">
-        <div class="q-en">The word <strong>their</strong> in paragraph 2 refers to ___</div>
-        <div class="q-vi">Từ <strong>"their"</strong> trong đoạn 2 chỉ ___</div>
-      </div>
-      <div class="q-toggle">⌄</div>
-    </div>
-    <div class="q-body">
-      <div class="options-grid">
-        <div class="opt wrong"><span class="opt-label">A</span><div class="opt-content"><div class="opt-en">daily activities</div><div class="opt-vi">các hoạt động hàng ngày</div></div></div>
-        <div class="opt wrong"><span class="opt-label">B</span><div class="opt-content"><div class="opt-en">customised learning plans</div><div class="opt-vi">kế hoạch học tập được cá nhân hóa</div></div></div>
-        <div class="opt wrong"><span class="opt-label">C</span><div class="opt-content"><div class="opt-en">personal growth</div><div class="opt-vi">sự phát triển cá nhân</div></div></div>
-        <div class="opt correct"><span class="opt-label">D</span><div class="opt-content"><div class="opt-en">habit trackers ✓</div><div class="opt-vi">các ứng dụng theo dõi thói quen</div></div></div>
-      </div>
-      <div class="answer-box">
-        <div class="answer-icon">✅</div>
-        <div class="answer-text"><strong>Đáp án: D – habit trackers</strong><br>
-        Câu chứa "their": <em>"Habit-tracking apps change <u>their</u> reminders on the fly"</em> → "their" = reminders của habit trackers → "their" chỉ "habit trackers".</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Q4 -->
-  <div class="q-card" id="q4">
-    <div class="q-header" onclick="toggle(this)">
-      <div class="q-num">Q4</div>
-      <div class="q-text">
-        <div class="q-en">Which of the following best paraphrases the underlined sentence in paragraph 2?</div>
-        <div class="q-vi">Câu nào sau đây diễn đạt lại đúng nhất câu được gạch chân trong đoạn 2?<br><em>("Because teenagers direct their focus exactly where it helps, their self-confidence rises while reliance on parents falls.")</em></div>
-      </div>
-      <div class="q-toggle">⌄</div>
-    </div>
-    <div class="q-body">
-      <div class="options-grid">
-        <div class="opt wrong"><span class="opt-label">A</span><div class="opt-content"><div class="opt-en">As effort is directed to areas that need it, self-esteem increases and dependence on parents declines.</div><div class="opt-vi">Khi nỗ lực hướng đến nơi cần thiết, lòng tự trọng tăng và sự phụ thuộc vào cha mẹ giảm.</div></div></div>
-        <div class="opt wrong"><span class="opt-label">B</span><div class="opt-content"><div class="opt-en">When attention is placed only where it is needed, confidence degrades faster yet more overdue tasks are released.</div><div class="opt-vi">Khi sự chú ý chỉ đặt vào nơi cần, sự tự tin giảm nhanh hơn nhưng có thêm các nhiệm vụ trễ hạn.</div></div></div>
-      </div>
-      <div class="answer-box">
-        <div class="answer-icon">✅</div>
-        <div class="answer-text"><strong>Đáp án: A</strong><br>
-        Câu gốc: "Because teenagers <em>direct their focus exactly where it helps</em> → self-confidence rises, reliance on parents falls." → Đáp án A diễn đạt đúng: "nỗ lực hướng đến nơi cần → tự trọng tăng, phụ thuộc cha mẹ giảm." Đáp án B sai vì nói confidence "degrades" (giảm) và "more overdue tasks" – hoàn toàn ngược nghĩa.</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Q5 -->
-  <div class="q-card" id="q5">
-    <div class="q-header" onclick="toggle(this)">
-      <div class="q-num">Q5</div>
-      <div class="q-text">
-        <div class="q-en">The word <strong>slashing</strong> in paragraph 3 is OPPOSITE in meaning to ___</div>
-        <div class="q-vi">Từ <strong>"slashing"</strong> trong đoạn 3 TRÁI NGHĨA với ___</div>
-      </div>
-      <div class="q-toggle">⌄</div>
-    </div>
-    <div class="q-body">
-      <div class="options-grid">
-        <div class="opt wrong"><span class="opt-label">A</span><div class="opt-content"><div class="opt-en">disposing</div><div class="opt-vi">loại bỏ, tiêu thụ</div></div></div>
-        <div class="opt wrong"><span class="opt-label">B</span><div class="opt-content"><div class="opt-en">converting</div><div class="opt-vi">chuyển đổi</div></div></div>
-        <div class="opt correct"><span class="opt-label">C</span><div class="opt-content"><div class="opt-en">increasing ✓</div><div class="opt-vi">tăng lên</div></div></div>
-        <div class="opt wrong"><span class="opt-label">D</span><div class="opt-content"><div class="opt-en">reducing</div><div class="opt-vi">giảm xuống</div></div></div>
-      </div>
-      <div class="answer-box">
-        <div class="answer-icon">✅</div>
-        <div class="answer-text"><strong>Đáp án: C – increasing</strong><br>
-        "Slashing" = cắt giảm mạnh, giảm đáng kể. Trái nghĩa của nó là <em>increasing</em> (tăng lên). Đáp án D (reducing) là đồng nghĩa, không phải trái nghĩa.</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Q6 -->
-  <div class="q-card" id="q6">
-    <div class="q-header" onclick="toggle(this)">
-      <div class="q-num">Q6</div>
-      <div class="q-text">
-        <div class="q-en">Which of the following can be inferred from paragraph 4?</div>
-        <div class="q-vi">Điều nào sau đây có thể được suy ra từ đoạn 4?</div>
-      </div>
-      <div class="q-toggle">⌄</div>
-    </div>
-    <div class="q-body">
-      <div class="options-grid">
-        <div class="opt wrong"><span class="opt-label">A</span><div class="opt-content"><div class="opt-en">Teenagers have little reliable information on completed assignments and saved allowances.</div><div class="opt-vi">Thanh thiếu niên có ít thông tin đáng tin cậy về bài tập đã hoàn thành và tiền tiết kiệm.</div></div></div>
-        <div class="opt correct"><span class="opt-label">B</span><div class="opt-content"><div class="opt-en">Users regard cloud platforms as the best tools to improve the quality of their chores. ✓</div><div class="opt-vi">Người dùng xem nền tảng đám mây là công cụ tốt nhất để cải thiện chất lượng công việc nhà.</div></div></div>
-        <div class="opt wrong"><span class="opt-label">C</span><div class="opt-content"><div class="opt-en">Teenagers are unable to forecast future expenses in the following week.</div><div class="opt-vi">Thanh thiếu niên không thể dự đoán chi tiêu trong tuần tiếp theo.</div></div></div>
-        <div class="opt wrong"><span class="opt-label">D</span><div class="opt-content"><div class="opt-en">Analytic tools offer suggestions for better time-management plans for the following week.</div><div class="opt-vi">Các công cụ phân tích đề xuất kế hoạch quản lý thời gian tốt hơn cho tuần tiếp theo.</div></div></div>
-      </div>
-      <div class="answer-box">
-        <div class="answer-icon">✅</div>
-        <div class="answer-text"><strong>Đáp án: B</strong><br>
-        Đoạn 4 nói cloud platforms ghi lại "household chores, completed assignments, and saved allowances" → người dùng (teenagers) dựa vào đó để phản tư và cải thiện → suy ra B là đúng. D sai vì đó là "analytic tools" chứ không phải cloud platforms.</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Q7 -->
-  <div class="q-card" id="q7">
-    <div class="q-header" onclick="toggle(this)">
-      <div class="q-num">Q7</div>
-      <div class="q-text">
-        <div class="q-en">Which paragraph mentions approaches to screen time and distractions?</div>
-        <div class="q-vi">Đoạn nào đề cập đến cách tiếp cận thời gian màn hình và phiền nhiễu?</div>
-      </div>
-      <div class="q-toggle">⌄</div>
-    </div>
-    <div class="q-body">
-      <div class="options-grid">
-        <div class="opt wrong"><span class="opt-label">A</span><div class="opt-content"><div class="opt-en">Paragraph 4</div><div class="opt-vi">Đoạn 4</div></div></div>
-        <div class="opt correct"><span class="opt-label">B</span><div class="opt-content"><div class="opt-en">Paragraph 2 & 3 ✓</div><div class="opt-vi">Đoạn 2 và 3</div></div></div>
-        <div class="opt wrong"><span class="opt-label">C</span><div class="opt-content"><div class="opt-en">Paragraph 3</div><div class="opt-vi">Đoạn 3</div></div></div>
-        <div class="opt wrong"><span class="opt-label">D</span><div class="opt-content"><div class="opt-en">Paragraph 1</div><div class="opt-vi">Đoạn 1</div></div></div>
-      </div>
-      <div class="answer-box">
-        <div class="answer-icon">✅</div>
-        <div class="answer-text"><strong>Đáp án: B – Paragraph 2 & 3 (chủ yếu Paragraph 3)</strong><br>
-        Đoạn 3: "Specialised software tracks screen time every hour, and productivity apps predict periods of high distraction. Automated blockers deliver measured restrictions to social media..." → đây là đoạn chính về screen time & distractions.</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Q8 -->
-  <div class="q-card" id="q8">
-    <div class="q-header" onclick="toggle(this)">
-      <div class="q-num">Q8</div>
-      <div class="q-text">
-        <div class="q-en">Which paragraph mentions real-time tracking of chores and allowances?</div>
-        <div class="q-vi">Đoạn nào đề cập đến việc theo dõi thời gian thực công việc nhà và tiền tiêu vặt?</div>
-      </div>
-      <div class="q-toggle">⌄</div>
-    </div>
-    <div class="q-body">
-      <div class="options-grid">
-        <div class="opt wrong"><span class="opt-label">A</span><div class="opt-content"><div class="opt-en">Paragraph 4</div><div class="opt-vi">Đoạn 4</div></div></div>
-        <div class="opt correct"><span class="opt-label">B</span><div class="opt-content"><div class="opt-en">Paragraph 2 ✓</div><div class="opt-vi">Đoạn 2</div></div></div>
-        <div class="opt wrong"><span class="opt-label">C</span><div class="opt-content"><div class="opt-en">Paragraph 3</div><div class="opt-vi">Đoạn 3</div></div></div>
-        <div class="opt wrong"><span class="opt-label">D</span><div class="opt-content"><div class="opt-en">Paragraph 1</div><div class="opt-vi">Đoạn 1</div></div></div>
-      </div>
-      <div class="answer-box">
-        <div class="answer-icon">✅</div>
-        <div class="answer-text"><strong>Đáp án: A – Paragraph 4</strong><br>
-        Đoạn 4 nói: "Cloud platforms record household chores, completed assignments, and saved allowances the moment they change" → đây là đoạn đề cập real-time tracking of chores and allowances.</div>
-      </div>
+  <div class="reason-box">
+    <strong>Cấu trúc cần nhớ</strong>
+    <strong>Although + mệnh đề, mệnh đề chính</strong> → dùng khi 2 ý trái chiều nhau.<br>
+    "However" đứng giữa 2 câu riêng (sau dấu chấm/chấm phẩy), không dùng đầu câu nối 2 mệnh đề.
+    <div style="margin-top:0.5rem">
+      <span class="grammar-pill">Tương phản: Although / Even though / Despite</span>
+      <span class="grammar-pill">Kết quả: Therefore / Thus / So</span>
+      <span class="grammar-pill">Nguyên nhân: Because / Since / As</span>
     </div>
   </div>
 </div>
 
-<div class="divider"></div>
-
-<!-- ===== PHẦN 2: GLOBAL SUCCESS UNIVERSITY FAIR (Q9–14) & READING 2 (Q19–29) ===== -->
-<div id="part4">
-  <div class="section-header">
-    <div class="section-icon icon-orange">✏️</div>
-    <div>
-      <div class="section-title">Phần – Điền từ vào chỗ trống (Câu 9–14)</div>
-      <div class="section-sub">Global Success University Fair 2025 – Điền từ phù hợp</div>
+<!-- Q2 -->
+<div class="question-card" id="q2">
+  <div class="q-header">
+    <span class="q-num">Q·02</span>
+    <div class="q-context">Chỗ trống nằm sau danh từ <em>"skills"</em> → cần <em>đại từ quan hệ</em> làm chủ ngữ mệnh đề quan hệ (thay cho "skills")</div>
+  </div>
+  <div class="tip-row">skills (2)___ are valued by employers → "skills" là vật → dùng "which" hoặc "that"</div>
+  <div class="options-grid">
+    <div class="option correct">
+      <span class="opt-letter">A</span>
+      <div><div class="opt-text">which</div><div class="opt-viet">mà / cái mà — đại từ quan hệ chỉ vật ✓</div></div>
+      <span class="opt-tag tag-correct">✓ Đáp án</span>
+    </div>
+    <div class="option wrong">
+      <span class="opt-letter">B</span>
+      <div><div class="opt-text">who</div><div class="opt-viet">người mà — chỉ dùng cho người</div></div>
+      <span class="opt-tag tag-wrong">Loại</span>
+    </div>
+    <div class="option wrong">
+      <span class="opt-letter">C</span>
+      <div><div class="opt-text">that</div><div class="opt-viet">mà — dùng được, nhưng "which" tự nhiên hơn trong văn viết trang trọng</div></div>
+      <span class="opt-tag tag-wrong">Thứ 2</span>
+    </div>
+    <div class="option wrong">
+      <span class="opt-letter">D</span>
+      <div><div class="opt-text">what</div><div class="opt-viet">cái gì / điều gì — không dùng sau danh từ cụ thể</div></div>
+      <span class="opt-tag tag-wrong">Loại</span>
     </div>
   </div>
-
-  <!-- Q9 -->
-  <div class="q-card">
-    <div class="q-header" onclick="toggle(this)">
-      <div class="q-num fill">Q9</div>
-      <div class="q-text">
-        <div class="q-en">...features the largest <strong>(9)___</strong> of participating institutions in its history...</div>
-        <div class="q-vi">...có số <strong>(9)___</strong> cơ sở tham gia lớn nhất trong lịch sử...</div>
-      </div>
-      <div class="q-toggle">⌄</div>
-    </div>
-    <div class="q-body">
-      <div class="options-grid">
-        <div class="opt wrong"><span class="opt-label">A</span><div class="opt-content"><div class="opt-en">volume</div><div class="opt-vi">âm lượng; thể tích</div></div></div>
-        <div class="opt wrong"><span class="opt-label">B</span><div class="opt-content"><div class="opt-en">amount</div><div class="opt-vi">số lượng (không đếm được)</div></div></div>
-        <div class="opt correct"><span class="opt-label">C</span><div class="opt-content"><div class="opt-en">number ✓</div><div class="opt-vi">con số, số lượng (đếm được)</div></div></div>
-        <div class="opt wrong"><span class="opt-label">D</span><div class="opt-content"><div class="opt-en">level</div><div class="opt-vi">cấp độ, mức độ</div></div></div>
-      </div>
-      <div class="answer-box"><div class="answer-icon">✅</div><div class="answer-text"><strong>Đáp án: C – number</strong><br>"Number" dùng với danh từ đếm được (institutions = các trường). "Amount" dùng với danh từ không đếm được.</div></div>
-    </div>
-  </div>
-
-  <!-- Q10 -->
-  <div class="q-card">
-    <div class="q-header" onclick="toggle(this)">
-      <div class="q-num fill">Q10</div>
-      <div class="q-text">
-        <div class="q-en">...the most thrilling <strong>(10)___</strong> so far.</div>
-        <div class="q-vi">...kỳ hội chợ <strong>(10)___</strong> nhất từ trước đến nay.</div>
-      </div>
-      <div class="q-toggle">⌄</div>
-    </div>
-    <div class="q-body">
-      <div class="options-grid">
-        <div class="opt wrong"><span class="opt-label">A</span><div class="opt-content"><div class="opt-en">event</div><div class="opt-vi">sự kiện</div></div></div>
-        <div class="opt correct"><span class="opt-label">B</span><div class="opt-content"><div class="opt-en">competitive ✓</div><div class="opt-vi">cạnh tranh</div></div></div>
-        <div class="opt wrong"><span class="opt-label">C</span><div class="opt-content"><div class="opt-en">compete</div><div class="opt-vi">cạnh tranh (động từ)</div></div></div>
-        <div class="opt wrong"><span class="opt-label">D</span><div class="opt-content"><div class="opt-en">competitively</div><div class="opt-vi">một cách cạnh tranh (trạng từ)</div></div></div>
-      </div>
-      <div class="answer-box"><div class="answer-icon">✅</div><div class="answer-text"><strong>Đáp án: A – event</strong><br>Cần danh từ sau "the most thrilling". "Event" = sự kiện, phù hợp ngữ cảnh hội chợ trường đại học. Đáp án của đề là A (event).</div></div>
-    </div>
-  </div>
-
-  <!-- Q11 -->
-  <div class="q-card">
-    <div class="q-header" onclick="toggle(this)">
-      <div class="q-num fill">Q11</div>
-      <div class="q-text">
-        <div class="q-en">...with thirty years of experience in career counselling, EduTech Vina is expected to deliver a breathtaking presentation. It is among the <strong>(12)___</strong> candidates to win...</div>
-        <div class="q-vi">...EduTech Vina được kỳ vọng sẽ có bài trình bày ấn tượng. Đây là một trong những ứng viên <strong>(12)___</strong> nhất để giành chiến thắng...</div>
-      </div>
-      <div class="q-toggle">⌄</div>
-    </div>
-    <div class="q-body">
-      <div class="options-grid">
-        <div class="opt correct"><span class="opt-label">A</span><div class="opt-content"><div class="opt-en">managed ✓</div><div class="opt-vi">được quản lý tốt</div></div></div>
-        <div class="opt wrong"><span class="opt-label">B</span><div class="opt-content"><div class="opt-en">managing</div><div class="opt-vi">đang quản lý</div></div></div>
-        <div class="opt wrong"><span class="opt-label">C</span><div class="opt-content"><div class="opt-en">has managed</div><div class="opt-vi">đã quản lý</div></div></div>
-        <div class="opt wrong"><span class="opt-label">D</span><div class="opt-content"><div class="opt-en">is managing</div><div class="opt-vi">đang quản lý</div></div></div>
-      </div>
-      <div class="answer-box"><div class="answer-icon">✅</div><div class="answer-text"><strong>Đáp án: A – managed</strong><br>Q11 hỏi về chỗ trống số (11) – theo đề là "managed" (past participle dùng như tính từ trong cụm "a newcomer this year"). Xem lại ngữ cảnh đề.</div></div>
-    </div>
-  </div>
-
-  <!-- Q12 -->
-  <div class="q-card">
-    <div class="q-header" onclick="toggle(this)">
-      <div class="q-num fill">Q12</div>
-      <div class="q-text">
-        <div class="q-en">It is among the <strong>(12)___</strong> candidates to win the "Best Educational Advisor" award.</div>
-        <div class="q-vi">Đây là một trong những ứng viên <strong>(12)___</strong> nhất để giành giải "Cố vấn Giáo dục Xuất sắc nhất".</div>
-      </div>
-      <div class="q-toggle">⌄</div>
-    </div>
-    <div class="q-body">
-      <div class="options-grid">
-        <div class="opt wrong"><span class="opt-label">A</span><div class="opt-content"><div class="opt-en">top</div><div class="opt-vi">hàng đầu</div></div></div>
-        <div class="opt wrong"><span class="opt-label">B</span><div class="opt-content"><div class="opt-en">quick</div><div class="opt-vi">nhanh</div></div></div>
-        <div class="opt wrong"><span class="opt-label">C</span><div class="opt-content"><div class="opt-en">high</div><div class="opt-vi">cao</div></div></div>
-        <div class="opt correct"><span class="opt-label">D</span><div class="opt-content"><div class="opt-en">smart ✓</div><div class="opt-vi">thông minh, xuất sắc</div></div></div>
-      </div>
-      <div class="answer-box"><div class="answer-icon">✅</div><div class="answer-text"><strong>Đáp án: A – top</strong><br>"Among the top candidates" = trong số các ứng viên hàng đầu. "Top" là từ cố định thường đi với "candidates/performers" trong văn phong trang trọng.</div></div>
-    </div>
-  </div>
-
-  <!-- Q13 -->
-  <div class="q-card">
-    <div class="q-header" onclick="toggle(this)">
-      <div class="q-num fill">Q13</div>
-      <div class="q-text">
-        <div class="q-en">...the Fair has helped the city <strong>(13)___</strong> by the Ministry of Education...</div>
-        <div class="q-vi">...Hội chợ đã giúp thành phố <strong>(13)___</strong> bởi Bộ Giáo dục...</div>
-      </div>
-      <div class="q-toggle">⌄</div>
-    </div>
-    <div class="q-body">
-      <div class="options-grid">
-        <div class="opt correct"><span class="opt-label">A</span><div class="opt-content"><div class="opt-en">who ✓</div><div class="opt-vi">người mà</div></div></div>
-        <div class="opt wrong"><span class="opt-label">B</span><div class="opt-content"><div class="opt-en">which</div><div class="opt-vi">mà (vật)</div></div></div>
-        <div class="opt wrong"><span class="opt-label">C</span><div class="opt-content"><div class="opt-en">when</div><div class="opt-vi">khi</div></div></div>
-        <div class="opt wrong"><span class="opt-label">D</span><div class="opt-content"><div class="opt-en">why</div><div class="opt-vi">tại sao</div></div></div>
-      </div>
-      <div class="answer-box"><div class="answer-icon">✅</div><div class="answer-text"><strong>Đáp án: A – who</strong><br>Theo ngữ cảnh đề gốc (Q13), đáp án là "A – who" hoặc đại từ quan hệ phù hợp chỉ người/tổ chức. Chỗ trống (13) cần đại từ quan hệ nối với "school-leavers" (người).</div></div>
-    </div>
-  </div>
-
-  <!-- Q14 -->
-  <div class="q-card">
-    <div class="q-header" onclick="toggle(this)">
-      <div class="q-num fill">Q14</div>
-      <div class="q-text">
-        <div class="q-en">Question 14: ___ build up / go up / come up / look up</div>
-        <div class="q-vi">Câu 14: Chọn cụm động từ phù hợp</div>
-      </div>
-      <div class="q-toggle">⌄</div>
-    </div>
-    <div class="q-body">
-      <div class="options-grid">
-        <div class="opt correct"><span class="opt-label">A</span><div class="opt-content"><div class="opt-en">build up ✓</div><div class="opt-vi">xây dựng, tích lũy</div></div></div>
-        <div class="opt wrong"><span class="opt-label">B</span><div class="opt-content"><div class="opt-en">go up</div><div class="opt-vi">đi lên, tăng</div></div></div>
-        <div class="opt wrong"><span class="opt-label">C</span><div class="opt-content"><div class="opt-en">come up</div><div class="opt-vi">nảy sinh, xuất hiện</div></div></div>
-        <div class="opt wrong"><span class="opt-label">D</span><div class="opt-content"><div class="opt-en">look up</div><div class="opt-vi">tra cứu, ngước nhìn</div></div></div>
-      </div>
-      <div class="answer-box"><div class="answer-icon">✅</div><div class="answer-text"><strong>Đáp án: A – build up</strong><br>"Build up" = xây dựng, phát triển dần. Phù hợp với ngữ cảnh hội chợ giúp học sinh "build up" danh tiếng hoặc kiến thức cho thành phố.</div></div>
-    </div>
+  <div class="reason-box">
+    <strong>Mệnh đề quan hệ</strong>
+    <strong>who</strong> → người &nbsp;|&nbsp; <strong>which</strong> → vật/ý tưởng &nbsp;|&nbsp; <strong>that</strong> → cả người lẫn vật (không dùng sau dấu phẩy) &nbsp;|&nbsp; <strong>what</strong> → "điều mà" (không có danh từ đứng trước)
   </div>
 </div>
 
-<div class="divider"></div>
-
-<!-- ===== PHẦN 3: SẮP XẾP CÂU (Q15–18) ===== -->
-<div id="part3">
-  <div class="section-header">
-    <div class="section-icon icon-purple">🔤</div>
-    <div>
-      <div class="section-title">Phần – Sắp xếp câu / Điền vào hội thoại (Câu 15–18)</div>
-      <div class="section-sub">Chọn thứ tự sắp xếp câu hoặc điền hội thoại phù hợp</div>
+<!-- Q3 -->
+<div class="question-card" id="q3">
+  <div class="q-header">
+    <span class="q-num">Q·03</span>
+    <div class="q-context">Cấu trúc: <em>a large ___ of money</em> → cần danh từ chỉ lượng đi với "money" (danh từ không đếm được)</div>
+  </div>
+  <div class="tip-row">money = danh từ không đếm được → không dùng "number" hay "many"</div>
+  <div class="options-grid">
+    <div class="option wrong">
+      <span class="opt-letter">A</span>
+      <div><div class="opt-text">amount</div><div class="opt-viet">lượng — a large amount of + danh từ không đếm được ✓</div></div>
+      <span class="opt-tag tag-correct">✓ Đáp án</span>
+    </div>
+    <div class="option wrong">
+      <span class="opt-letter">B</span>
+      <div><div class="opt-text">number</div><div class="opt-viet">số lượng — a large number of + danh từ đếm được số nhiều</div></div>
+      <span class="opt-tag tag-wrong">Loại</span>
+    </div>
+    <div class="option wrong">
+      <span class="opt-letter">C</span>
+      <div><div class="opt-text">many</div><div class="opt-viet">nhiều — dùng trực tiếp trước danh từ đếm được</div></div>
+      <span class="opt-tag tag-wrong">Loại</span>
+    </div>
+    <div class="option wrong">
+      <span class="opt-letter">D</span>
+      <div><div class="opt-text">every</div><div class="opt-viet">mỗi — không dùng trong cấu trúc này</div></div>
+      <span class="opt-tag tag-wrong">Loại</span>
     </div>
   </div>
-
-  <!-- Q15 -->
-  <div class="q-card">
-    <div class="q-header" onclick="toggle(this)">
-      <div class="q-num arrange">Q15</div>
-      <div class="q-text">
-        <div class="q-en">Arrange the sentences about <em>managing own finances</em> to make a coherent paragraph.</div>
-        <div class="q-vi">Sắp xếp các câu về <em>quản lý tài chính cá nhân</em> thành đoạn văn mạch lạc.</div>
-      </div>
-      <div class="q-toggle">⌄</div>
-    </div>
-    <div class="q-body">
-      <div class="utterances">
-        <div class="utterance"><span class="utt-label">a.</span><div><div class="utt-en">I had to burn the midnight oil to manage my own finances, expecting to become fully independent.</div><div class="utt-vi">Tôi phải thức khuya để quản lý tài chính của chính mình, với kỳ vọng trở nên hoàn toàn tự lập.</div></div></div>
-        <div class="utterance"><span class="utt-label">b.</span><div><div class="utt-en">The reality, however, was not what I had expected when I completely failed to keep my budget under control.</div><div class="utt-vi">Tuy nhiên, thực tế không như tôi mong đợi khi tôi hoàn toàn thất bại trong việc kiểm soát ngân sách.</div></div></div>
-        <div class="utterance"><span class="utt-label">c.</span><div><div class="utt-en">This valuable experience was indeed memorable and made me more confident in my transition to adulthood.</div><div class="utt-vi">Kinh nghiệm quý giá này thực sự đáng nhớ và giúp tôi tự tin hơn trong quá trình chuyển sang tuổi trưởng thành.</div></div></div>
-        <div class="utterance"><span class="utt-label">d.</span><div><div class="utt-en">Living far from home encouraged me to pursue a self-reliant lifestyle, a demanding yet rewarding one.</div><div class="utt-vi">Sống xa nhà đã khuyến khích tôi theo đuổi lối sống tự lập, một lối sống đòi hỏi nhưng đáng giá.</div></div></div>
-        <div class="utterance"><span class="utt-label">e.</span><div><div class="utt-en">Instead of giving up, I reflected on what I had spent and made improvements in the following months.</div><div class="utt-vi">Thay vì bỏ cuộc, tôi nhìn lại những gì đã chi tiêu và cải thiện trong những tháng tiếp theo.</div></div></div>
-      </div>
-      <div class="correct-order">
-        <div class="co-label">✅ Thứ tự đúng</div>
-        <div class="co-val">d → a → b → e → c</div>
-        <div class="utt-vi" style="margin-top:8px">Hoàn cảnh → Hành động → Thất bại → Cải thiện → Kết quả tích cực</div>
-      </div>
-      <div class="tip-box"><div class="tip-title">💡 Mẹo sắp xếp</div>Câu d mở đầu (bối cảnh sống xa nhà) → a (hành động cụ thể) → b (thất bại thực tế) → e (phản ứng tích cực) → c (kết quả/bài học). Theo cấu trúc STORY: Setup → Action → Conflict → Resolution → Lesson.</div>
-    </div>
-  </div>
-
-  <!-- Q16 -->
-  <div class="q-card">
-    <div class="q-header" onclick="toggle(this)">
-      <div class="q-num arrange">Q16</div>
-      <div class="q-text">
-        <div class="q-en">Arrange the conversation about <em>online learning vs traditional classes</em>.</div>
-        <div class="q-vi">Sắp xếp hội thoại về <em>học trực tuyến và lớp học truyền thống</em>.</div>
-      </div>
-      <div class="q-toggle">⌄</div>
-    </div>
-    <div class="q-body">
-      <div class="utterances">
-        <div class="utterance"><span class="utt-label">a.</span><div><div class="utt-en">David: I used to, but now I use online courses and educational apps.</div><div class="utt-vi">David: Tôi đã từng vậy, nhưng bây giờ tôi dùng các khóa học trực tuyến và ứng dụng giáo dục.</div></div></div>
-        <div class="utterance"><span class="utt-label">b.</span><div><div class="utt-en">Lisa: Same here! It's more convenient, but I think traditional classrooms have their own charm.</div><div class="utt-vi">Lisa: Mình cũng vậy! Tiện hơn đấy, nhưng mình nghĩ lớp học truyền thống có sức hút riêng của nó.</div></div></div>
-        <div class="utterance"><span class="utt-label">c.</span><div><div class="utt-en">Lisa: Do you still attend physical classes?</div><div class="utt-vi">Lisa: Bạn vẫn còn tham gia các lớp học trực tiếp không?</div></div></div>
-        <div class="utterance"><span class="utt-label">d.</span><div><div class="utt-en">David: You're right. They fill us with interactive experiences that's hard to replace.</div><div class="utt-vi">David: Bạn nói đúng. Chúng mang lại những trải nghiệm tương tác khó thay thế.</div></div></div>
-      </div>
-      <div class="correct-order">
-        <div class="co-label">✅ Thứ tự đúng</div>
-        <div class="co-val">c → a → b → d</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Q17 -->
-  <div class="q-card">
-    <div class="q-header" onclick="toggle(this)">
-      <div class="q-num arrange">Q17</div>
-      <div class="q-text">
-        <div class="q-en">Arrange the conversation about <em>household chores</em>.</div>
-        <div class="q-vi">Sắp xếp hội thoại về <em>việc nhà</em>.</div>
-      </div>
-      <div class="q-toggle">⌄</div>
-    </div>
-    <div class="q-body">
-      <div class="utterances">
-        <div class="utterance"><span class="utt-label">a.</span><div><div class="utt-en">Tom: Then, text me when you've finished your chores.</div><div class="utt-vi">Tom: Vậy thì, nhắn tin cho tôi khi bạn đã xong việc nhà nhé.</div></div></div>
-        <div class="utterance"><span class="utt-label">b.</span><div><div class="utt-en">Tom: It's getting late. Would you like me to give you a hand with the housework?</div><div class="utt-vi">Tom: Muộn rồi đó. Bạn có muốn tôi giúp một tay với công việc nhà không?</div></div></div>
-        <div class="utterance"><span class="utt-label">c.</span><div><div class="utt-en">Mary: Thanks, but I'm going to wash the dishes and then mop the floor myself to be more independent.</div><div class="utt-vi">Mary: Cảm ơn, nhưng tôi sẽ tự rửa bát rồi lau sàn để tự lập hơn.</div></div></div>
-      </div>
-      <div class="correct-order">
-        <div class="co-label">✅ Thứ tự đúng</div>
-        <div class="co-val">b → c → a</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Q18 -->
-  <div class="q-card">
-    <div class="q-header" onclick="toggle(this)">
-      <div class="q-num arrange">Q18</div>
-      <div class="q-text">
-        <div class="q-en">Arrange the formal letter from <em>Dear Ms Smith</em>.</div>
-        <div class="q-vi">Sắp xếp các phần của bức thư trang trọng gửi <em>Ms Smith</em>.</div>
-      </div>
-      <div class="q-toggle">⌄</div>
-    </div>
-    <div class="q-body">
-      <div class="utterances">
-        <div class="utterance"><span class="utt-label">a.</span><div><div class="utt-en">This has been pre-approved, but you need to have this letter and your identification card produced at the admission office to apply.</div><div class="utt-vi">Điều này đã được phê duyệt trước, nhưng bạn cần mang thư này và CMND đến văn phòng tuyển sinh để đăng ký.</div></div></div>
-        <div class="utterance"><span class="utt-label">b.</span><div><div class="utt-en">The offer is exclusive and expires on December 31st.</div><div class="utt-vi">Ưu đãi này là độc quyền và hết hạn vào ngày 31 tháng 12.</div></div></div>
-        <div class="utterance"><span class="utt-label">c.</span><div><div class="utt-en">Your application will be processed, and your student card will be issued within 48 hours for immediate use.</div><div class="utt-vi">Đơn của bạn sẽ được xử lý, và thẻ sinh viên sẽ được cấp trong vòng 48 giờ để sử dụng ngay.</div></div></div>
-        <div class="utterance"><span class="utt-label">d.</span><div><div class="utt-en">It is our honour to offer you a scholarship of $6000, affordable with the monthly deduction of $99.</div><div class="utt-vi">Chúng tôi vinh dự cung cấp cho bạn học bổng $6000, với khoản khấu trừ hàng tháng $99.</div></div></div>
-        <div class="utterance"><span class="utt-label">e.</span><div><div class="utt-en">Should you require further details, please call 0123888888, or visit any of our offices.</div><div class="utt-vi">Nếu cần thêm thông tin, vui lòng gọi 0123888888 hoặc đến văn phòng của chúng tôi.</div></div></div>
-      </div>
-      <div class="correct-order">
-        <div class="co-label">✅ Thứ tự đúng</div>
-        <div class="co-val">d → a → b → c → e</div>
-        <div class="utt-vi" style="margin-top:8px">Thông báo học bổng → Hướng dẫn nộp hồ sơ → Hạn chót → Xử lý hồ sơ → Liên hệ thêm</div>
-      </div>
-    </div>
+  <div class="reason-box">
+    <strong>Cấu trúc số lượng</strong>
+    a large/great <strong>amount of</strong> + [không đếm được]: money, water, time...<br>
+    a large <strong>number of</strong> + [đếm được số nhiều]: students, books, problems...
   </div>
 </div>
 
-<div class="divider"></div>
-
-<!-- ===== PHẦN 2: READING – HERITAGE WASHING & MANAGING TIME (Q19–29, Q30–35) ===== -->
-<div id="part2">
-  <div class="section-header">
-    <div class="section-icon icon-green">📚</div>
-    <div>
-      <div class="section-title">Phần – Đọc hiểu 2: Heritage-Washing & Managing Time (Câu 19–29, 30–35)</div>
-      <div class="section-sub">Unit 6: Bảo tồn di sản | Unit 7: Quản lý thời gian</div>
+<!-- Q4 -->
+<div class="question-card" id="q4">
+  <div class="q-header">
+    <span class="q-num">Q·04</span>
+    <div class="q-context">Cấu trúc: <em>It is ___ to carefully consider...</em> → tính từ sau "It is... to V"</div>
+  </div>
+  <div class="tip-row">Nghĩa câu: "Điều ___ là hãy cân nhắc kỹ..." → cần tính từ mang nghĩa quan trọng/cần thiết</div>
+  <div class="options-grid">
+    <div class="option correct">
+      <span class="opt-letter">A</span>
+      <div><div class="opt-text">crucial</div><div class="opt-viet">cực kỳ quan trọng, thiết yếu ✓</div></div>
+      <span class="opt-tag tag-correct">✓ Đáp án</span>
+    </div>
+    <div class="option wrong">
+      <span class="opt-letter">B</span>
+      <div><div class="opt-text">optional</div><div class="opt-viet">tùy chọn, không bắt buộc — sai nghĩa</div></div>
+      <span class="opt-tag tag-wrong">Loại</span>
+    </div>
+    <div class="option wrong">
+      <span class="opt-letter">C</span>
+      <div><div class="opt-text">useless</div><div class="opt-viet">vô dụng — hoàn toàn sai nghĩa</div></div>
+      <span class="opt-tag tag-wrong">Loại</span>
+    </div>
+    <div class="option wrong">
+      <span class="opt-letter">D</span>
+      <div><div class="opt-text">harmful</div><div class="opt-viet">có hại — sai nghĩa</div></div>
+      <span class="opt-tag tag-wrong">Loại</span>
     </div>
   </div>
-
-  <!-- Q19 -->
-  <div class="q-card">
-    <div class="q-header" onclick="toggle(this)">
-      <div class="q-num">Q19</div>
-      <div class="q-text">
-        <div class="q-en">Answer key for Q19 (matching passage order): <strong>b–d–a–c–e–b</strong></div>
-        <div class="q-vi">Câu 19 – Ghép đoạn văn với thứ tự: b–d–a–c–e–b</div>
-      </div>
-      <div class="q-toggle">⌄</div>
-    </div>
-    <div class="q-body">
-      <div class="answer-box"><div class="answer-icon">✅</div><div class="answer-text"><strong>Đáp án: A – b–d–a–c–b–e</strong><br>Đây là câu hỏi về thứ tự đoạn văn của bài đọc Heritage-Washing. Theo đáp án trên đề gốc: <code>A. e–d–b–a–c–e</code> → Đáp án đúng là <strong>A</strong> theo đề.</div></div>
-    </div>
-  </div>
-
-  <!-- Q20 -->
-  <div class="q-card">
-    <div class="q-header" onclick="toggle(this)">
-      <div class="q-num">Q20</div>
-      <div class="q-text">
-        <div class="q-en">According to paragraph 1, having four packages claimed as culture-friendly rather than conducting meaningful heritage conservation will ___</div>
-        <div class="q-vi">Theo đoạn 1, việc có 4 gói được quảng cáo là "thân thiện với văn hóa" thay vì thực sự bảo tồn di sản sẽ ___</div>
-      </div>
-      <div class="q-toggle">⌄</div>
-    </div>
-    <div class="q-body">
-      <div class="options-grid">
-        <div class="opt wrong"><span class="opt-label">A</span><div class="opt-content"><div class="opt-en">bring about a full redesign of the business model of a company</div><div class="opt-vi">dẫn đến việc thiết kế lại toàn bộ mô hình kinh doanh</div></div></div>
-        <div class="opt correct"><span class="opt-label">B</span><div class="opt-content"><div class="opt-en">lead to delays without solving the current site problems ✓</div><div class="opt-vi">dẫn đến sự chậm trễ mà không giải quyết các vấn đề tại địa điểm hiện tại</div></div></div>
-        <div class="opt wrong"><span class="opt-label">C</span><div class="opt-content"><div class="opt-en">cause physical injuries to those involved in the negotiation</div><div class="opt-vi">gây thương tích thể chất cho những người liên quan đến đàm phán</div></div></div>
-        <div class="opt wrong"><span class="opt-label">D</span><div class="opt-content"><div class="opt-en">involve spending a huge amount of money paying the agency</div><div class="opt-vi">liên quan đến việc chi một khoản tiền lớn để trả cho đại lý</div></div></div>
-      </div>
-      <div class="answer-box"><div class="answer-icon">✅</div><div class="answer-text"><strong>Đáp án: B</strong><br>Đoạn 1 nói heritage-washing là "a fallacy" – điều giả tạo, không có thực. Quảng cáo "culture-friendly" thay vì thực sự bảo tồn → chỉ tạo ra sự trì hoãn, không giải quyết vấn đề thực sự tại di tích.</div></div>
-    </div>
-  </div>
-
-  <!-- Q21 -->
-  <div class="q-card">
-    <div class="q-header" onclick="toggle(this)">
-      <div class="q-num">Q21</div>
-      <div class="q-text">
-        <div class="q-en">The word <strong>manipulated</strong> in paragraph 2 mostly means ___</div>
-        <div class="q-vi">Từ <strong>"manipulated"</strong> trong đoạn 2 chủ yếu có nghĩa là ___</div>
-      </div>
-      <div class="q-toggle">⌄</div>
-    </div>
-    <div class="q-body">
-      <div class="options-grid">
-        <div class="opt wrong"><span class="opt-label">A</span><div class="opt-content"><div class="opt-en">randomly deployed</div><div class="opt-vi">triển khai ngẫu nhiên</div></div></div>
-        <div class="opt wrong"><span class="opt-label">B</span><div class="opt-content"><div class="opt-en">legally regulated</div><div class="opt-vi">được quy định hợp pháp</div></div></div>
-        <div class="opt correct"><span class="opt-label">C</span><div class="opt-content"><div class="opt-en">purposely adjusted ✓</div><div class="opt-vi">được điều chỉnh có mục đích (để đánh lừa)</div></div></div>
-        <div class="opt wrong"><span class="opt-label">D</span><div class="opt-content"><div class="opt-en">hastily produced</div><div class="opt-vi">được sản xuất vội vàng</div></div></div>
-      </div>
-      <div class="answer-box"><div class="answer-icon">✅</div><div class="answer-text"><strong>Đáp án: C – purposely adjusted</strong><br>"Manipulated" = thao túng, điều chỉnh có chủ đích để đánh lừa. "Purposely adjusted" diễn đạt đúng nghĩa này.</div></div>
-    </div>
-  </div>
-
-  <!-- Q22 -->
-  <div class="q-card">
-    <div class="q-header" onclick="toggle(this)">
-      <div class="q-num">Q22</div>
-      <div class="q-text">
-        <div class="q-en">Which of the following best summarises paragraph 2?</div>
-        <div class="q-vi">Câu nào sau đây tóm tắt tốt nhất đoạn 2?</div>
-      </div>
-      <div class="q-toggle">⌄</div>
-    </div>
-    <div class="q-body">
-      <div class="options-grid">
-        <div class="opt wrong"><span class="opt-label">A</span><div class="opt-content"><div class="opt-en">The stories about heritage-washing reach a much wider audience due to the joint effort of social media and traditional marketing channels.</div><div class="opt-vi">Các câu chuyện về heritage-washing tiếp cận lượng khán giả rộng hơn nhiều.</div></div></div>
-        <div class="opt wrong"><span class="opt-label">B</span><div class="opt-content"><div class="opt-en">Commercials for everyday products and services, ranging from holiday bookings to petrol pumps, are prevalent on unconventional channels.</div><div class="opt-vi">Quảng cáo cho sản phẩm/dịch vụ hàng ngày phổ biến trên các kênh phi truyền thống.</div></div></div>
-        <div class="opt wrong"><span class="opt-label">C</span><div class="opt-content"><div class="opt-en">Social media influencers and impressive reports have a role to play in the dissemination of deceptive environmental claims.</div><div class="opt-vi">Influencer mạng xã hội đóng vai trò phát tán các tuyên bố môi trường lừa dối.</div></div></div>
-        <div class="opt correct"><span class="opt-label">D</span><div class="opt-content"><div class="opt-en">Culture-preserving buzzwords now fill the travel sector, with their reach being amplified by influencers and polished reports. ✓</div><div class="opt-vi">Những từ thịnh hành về bảo tồn văn hóa hiện lan tràn ngành du lịch, được khuyếch đại bởi influencer và báo cáo bóng bẩy.</div></div></div>
-      </div>
-      <div class="answer-box"><div class="answer-icon">✅</div><div class="answer-text"><strong>Đáp án: D</strong><br>Đoạn 2 mô tả cách các từ ngữ "culture-respecting", "heritage-saving", "heritage-safe" xuất hiện khắp nơi trong ngành du lịch, được lan truyền bởi influencer và báo cáo bóng bẩy → D phù hợp nhất.</div></div>
-    </div>
-  </div>
-
-  <!-- Q23 -->
-  <div class="q-card">
-    <div class="q-header" onclick="toggle(this)">
-      <div class="q-num">Q23</div>
-      <div class="q-text">
-        <div class="q-en">What causes corporate tourism boards to adopt heritage-washing?</div>
-        <div class="q-vi">Điều gì khiến các ban du lịch doanh nghiệp áp dụng heritage-washing?</div>
-      </div>
-      <div class="q-toggle">⌄</div>
-    </div>
-    <div class="q-body">
-      <div class="options-grid">
-        <div class="opt correct"><span class="opt-label">A</span><div class="opt-content"><div class="opt-en">Increasing public concern about the destruction of historical sites ✓</div><div class="opt-vi">Mối lo ngại ngày càng tăng của công chúng về việc phá hủy các di tích lịch sử</div></div></div>
-        <div class="opt wrong"><span class="opt-label">B</span><div class="opt-content"><div class="opt-en">Public pressure on corporations to opt for PR campaigns</div><div class="opt-vi">Áp lực công chúng buộc doanh nghiệp chọn chiến dịch PR</div></div></div>
-        <div class="opt wrong"><span class="opt-label">C</span><div class="opt-content"><div class="opt-en">Growing public interest in the development of cultural loss</div><div class="opt-vi">Sự quan tâm ngày càng tăng của công chúng về sự mất mát văn hóa</div></div></div>
-        <div class="opt wrong"><span class="opt-label">D</span><div class="opt-content"><div class="opt-en">Public belief that structural investments are unnecessary</div><div class="opt-vi">Niềm tin của công chúng rằng đầu tư cơ cấu là không cần thiết</div></div></div>
-      </div>
-      <div class="answer-box"><div class="answer-icon">✅</div><div class="answer-text"><strong>Đáp án: A</strong><br>Heritage-washing nổi lên do công chúng ngày càng lo ngại về việc phá hủy di tích → doanh nghiệp dùng từ ngữ "heritage-friendly" để xoa dịu dư luận mà không thực sự hành động.</div></div>
-    </div>
-  </div>
-
-  <!-- Q24 -->
-  <div class="q-card">
-    <div class="q-header" onclick="toggle(this)">
-      <div class="q-num">Q24</div>
-      <div class="q-text">
-        <div class="q-en">What challenge do regulators face in monitoring preservation claims?</div>
-        <div class="q-vi">Các cơ quan quản lý đối mặt với thách thức nào trong việc giám sát các tuyên bố bảo tồn?</div>
-      </div>
-      <div class="q-toggle">⌄</div>
-    </div>
-    <div class="q-body">
-      <div class="options-grid">
-        <div class="opt wrong"><span class="opt-label">A</span><div class="opt-content"><div class="opt-en">be deliberate to confine themselves to a small number of choices</div><div class="opt-vi">cố tình giới hạn bản thân với ít lựa chọn</div></div></div>
-        <div class="opt wrong"><span class="opt-label">B</span><div class="opt-content"><div class="opt-en">being deliberately confined themselves to fewer choices</div><div class="opt-vi">bị giới hạn cố ý với ít lựa chọn hơn</div></div></div>
-        <div class="opt wrong"><span class="opt-label">C</span><div class="opt-content"><div class="opt-en">will deliberately confine themselves to a small number of choices</div><div class="opt-vi">sẽ cố ý giới hạn bản thân với ít lựa chọn</div></div></div>
-        <div class="opt correct"><span class="opt-label">D</span><div class="opt-content"><div class="opt-en">Enforcement that falls behind corporate creativity ✓</div><div class="opt-vi">Việc thực thi không theo kịp sự sáng tạo của doanh nghiệp</div></div></div>
-      </div>
-      <div class="answer-box"><div class="answer-icon">✅</div><div class="answer-text"><strong>Đáp án: A – Enforcement that falls behind corporate creativity</strong><br>Thách thức lớn nhất là: doanh nghiệp luôn tìm cách mới để đưa ra tuyên bố "heritage-friendly", trong khi quy định pháp luật không theo kịp tốc độ sáng tạo đó.</div></div>
-    </div>
-  </div>
-
-  <!-- Q25 -->
-  <div class="q-card">
-    <div class="q-header" onclick="toggle(this)">
-      <div class="q-num">Q25</div>
-      <div class="q-text">
-        <div class="q-en">The phrase <strong>the practice</strong> in paragraph 3 refers to ___</div>
-        <div class="q-vi">Cụm từ <strong>"the practice"</strong> trong đoạn 3 chỉ ___</div>
-      </div>
-      <div class="q-toggle">⌄</div>
-    </div>
-    <div class="q-body">
-      <div class="options-grid">
-        <div class="opt wrong"><span class="opt-label">A</span><div class="opt-content"><div class="opt-en">cultural loss B</div><div class="opt-vi">sự mất mát văn hóa</div></div></div>
-        <div class="opt wrong"><span class="opt-label">B</span><div class="opt-content"><div class="opt-en">scrutiny C</div><div class="opt-vi">sự xem xét kỹ lưỡng</div></div></div>
-        <div class="opt correct"><span class="opt-label">C</span><div class="opt-content"><div class="opt-en">traditional values ✓</div><div class="opt-vi">các giá trị truyền thống</div></div></div>
-        <div class="opt wrong"><span class="opt-label">D</span><div class="opt-content"><div class="opt-en">heritage-washing</div><div class="opt-vi">thực hành rửa di sản</div></div></div>
-      </div>
-      <div class="answer-box"><div class="answer-icon">✅</div><div class="answer-text"><strong>Đáp án: D – heritage-washing</strong><br>"The practice" trong ngữ cảnh đoạn 3 chỉ lại hành động "heritage-washing" đã được đề cập trước đó – tức là thực hành che đậy hành vi phá hủy di sản bằng ngôn từ đẹp.</div></div>
-    </div>
-  </div>
-
-  <!-- Q26 -->
-  <div class="q-card">
-    <div class="q-header" onclick="toggle(this)">
-      <div class="q-num">Q26</div>
-      <div class="q-text">
-        <div class="q-en">Which of the following best paraphrases the underlined sentence in paragraph 5?</div>
-        <div class="q-vi">Câu nào diễn đạt lại đúng nhất câu được gạch chân trong đoạn 5?</div>
-      </div>
-      <div class="q-toggle">⌄</div>
-    </div>
-    <div class="q-body">
-      <div class="options-grid">
-        <div class="opt wrong"><span class="opt-label">A</span><div class="opt-content"><div class="opt-en">cultural loss B</div><div class="opt-vi">mất mát văn hóa</div></div></div>
-        <div class="opt correct"><span class="opt-label">B</span><div class="opt-content"><div class="opt-en">scrutiny ✓</div><div class="opt-vi">sự xem xét kỹ lưỡng, giám sát chặt chẽ</div></div></div>
-        <div class="opt wrong"><span class="opt-label">C</span><div class="opt-content"><div class="opt-en">traditional values</div><div class="opt-vi">các giá trị truyền thống</div></div></div>
-        <div class="opt wrong"><span class="opt-label">D</span><div class="opt-content"><div class="opt-en">Conflicting laws on both sides of the Atlantic</div><div class="opt-vi">Các luật mâu thuẫn ở cả hai bờ Đại Tây Dương</div></div></div>
-      </div>
-      <div class="answer-box"><div class="answer-icon">✅</div><div class="answer-text"><strong>Đáp án: B – scrutiny</strong><br>Đoạn 5 nói về việc heritage-washing đang mất dần hiệu quả vì phải đối mặt với sự giám sát công khai ngày càng tăng. "Scrutiny" = sự xem xét, giám sát chặt chẽ.</div></div>
-    </div>
-  </div>
-
-  <!-- Q27 -->
-  <div class="q-card">
-    <div class="q-header" onclick="toggle(this)">
-      <div class="q-num">Q27</div>
-      <div class="q-text">
-        <div class="q-en">Which of the following can be inferred from the passage?</div>
-        <div class="q-vi">Điều nào sau đây có thể được suy ra từ bài đọc?</div>
-      </div>
-      <div class="q-toggle">⌄</div>
-    </div>
-    <div class="q-body">
-      <div class="options-grid">
-        <div class="opt wrong"><span class="opt-label">A</span><div class="opt-content"><div class="opt-en">Regulators are effectively utilising the tools and resources to verify most preservation claims, tackling the wide spread of eco-labels.</div><div class="opt-vi">Cơ quan quản lý đang hiệu quả sử dụng công cụ để xác minh hầu hết tuyên bố bảo tồn.</div></div></div>
-        <div class="opt correct"><span class="opt-label">B</span><div class="opt-content"><div class="opt-en">Heritage-washing brings corporations benefits in terms of finance and reputation without having to reform their core operations. ✓</div><div class="opt-vi">Heritage-washing mang lại lợi ích về tài chính và danh tiếng cho doanh nghiệp mà không cần cải cách hoạt động cốt lõi.</div></div></div>
-        <div class="opt wrong"><span class="opt-label">C</span><div class="opt-content"><div class="opt-en">The shift from ignoring historians to applying "heritage" paint reflects the travel industry's genuine commitment to restoration.</div><div class="opt-vi">Sự chuyển đổi phản ánh cam kết thực sự của ngành du lịch với việc phục hồi.</div></div></div>
-        <div class="opt wrong"><span class="opt-label">D</span><div class="opt-content"><div class="opt-en">Investors who value long-term cultural impact put pressure on travel companies to implement substantial structural reforms.</div><div class="opt-vi">Nhà đầu tư coi trọng tác động văn hóa dài hạn gây áp lực lên công ty du lịch.</div></div></div>
-      </div>
-      <div class="answer-box"><div class="answer-icon">✅</div><div class="answer-text"><strong>Đáp án: C – Unlike indifference which denies the problem, heritage-washing creates a false illusion of solution.</strong><br>Câu hỏi Q27 theo đề gốc hỏi điều gì có thể suy ra. Đáp án C trong đề là: "Unlike indifference which denies the problem, heritage-washing creates a false illusion of solution, which weakens true conservation efforts and delays new laws." → đây là suy luận hợp lý nhất từ toàn bài.</div></div>
-    </div>
-  </div>
-
-  <!-- Q28 -->
-  <div class="q-card">
-    <div class="q-header" onclick="toggle(this)">
-      <div class="q-num">Q28</div>
-      <div class="q-text">
-        <div class="q-en">Where in the passage does the following sentence best fit? <em>"Yet heritage-washing is arguably more insidious."</em></div>
-        <div class="q-vi">Câu <em>"Yet heritage-washing is arguably more insidious."</em> phù hợp nhất ở đâu trong bài? (Từ "insidious" = nguy hiểm ngầm, xảo quyệt)</div>
-      </div>
-      <div class="q-toggle">⌄</div>
-    </div>
-    <div class="q-body">
-      <div class="options-grid">
-        <div class="opt correct"><span class="opt-label">A</span><div class="opt-content"><div class="opt-en">[i] ✓</div><div class="opt-vi">Vị trí [i]</div></div></div>
-        <div class="opt wrong"><span class="opt-label">B</span><div class="opt-content"><div class="opt-en">[ii]</div><div class="opt-vi">Vị trí [ii]</div></div></div>
-        <div class="opt wrong"><span class="opt-label">C</span><div class="opt-content"><div class="opt-en">[iii]</div><div class="opt-vi">Vị trí [iii]</div></div></div>
-        <div class="opt wrong"><span class="opt-label">D</span><div class="opt-content"><div class="opt-en">[iv]</div><div class="opt-vi">Vị trí [iv]</div></div></div>
-      </div>
-      <div class="answer-box"><div class="answer-icon">✅</div><div class="answer-text"><strong>Đáp án: A – [i]</strong><br>Câu này đóng vai trò chuyển tiếp sau khi mô tả hành vi thờ ơ với di sản. "Yet... more insidious" = nhưng heritage-washing còn nguy hiểm hơn → phù hợp ngay sau câu nói về sự thờ ơ (vị trí [i]).</div></div>
-    </div>
-  </div>
-
-  <!-- Q29 -->
-  <div class="q-card">
-    <div class="q-header" onclick="toggle(this)">
-      <div class="q-num">Q29</div>
-      <div class="q-text">
-        <div class="q-en">Which of the following best summarises the passage?</div>
-        <div class="q-vi">Câu nào tóm tắt tốt nhất toàn bài đọc về Heritage-Washing?</div>
-      </div>
-      <div class="q-toggle">⌄</div>
-    </div>
-    <div class="q-body">
-      <div class="options-grid">
-        <div class="opt correct"><span class="opt-label">A</span><div class="opt-content"><div class="opt-en">Heritage-washing is surging as travel firms cover ongoing cultural damage in cultural preservation language. ✓</div><div class="opt-vi">Heritage-washing đang tăng mạnh khi các công ty du lịch che giấu thiệt hại văn hóa bằng ngôn ngữ bảo tồn.</div></div></div>
-        <div class="opt wrong"><span class="opt-label">B</span><div class="opt-content"><div class="opt-en">High-profit sectors follow the trend of heritage-washing, boasting about promising educational ventures in press releases while quietly going on damaging the environment.</div><div class="opt-vi">Các ngành lợi nhuận cao theo xu hướng heritage-washing, khoe khoang về các dự án giáo dục.</div></div></div>
-        <div class="opt wrong"><span class="opt-label">C</span><div class="opt-content"><div class="opt-en">Instead of investing in meaningful community development, mass tourism developers have a tendency to opt for denying the claim of 'heritage-saving' on their tour lines.</div><div class="opt-vi">Thay vì đầu tư phát triển cộng đồng, các nhà phát triển du lịch đại trà có xu hướng phủ nhận tuyên bố 'heritage-saving'.</div></div></div>
-        <div class="opt wrong"><span class="opt-label">D</span><div class="opt-content"><div class="opt-en">Once a prevalent strategy of corporations in response to public scrutiny, cultural indifference is losing its effectiveness and has to be replaced by heritage-washing.</div><div class="opt-vi">Sự thờ ơ văn hóa từng là chiến lược phổ biến nhưng đang mất dần hiệu quả và phải được thay thế bởi heritage-washing.</div></div></div>
-      </div>
-      <div class="answer-box"><div class="answer-icon">✅</div><div class="answer-text"><strong>Đáp án: A</strong><br>Toàn bài xoay quanh: Heritage-washing (dùng ngôn từ bảo tồn văn hóa để che giấu thiệt hại thực sự) đang lan tràn trong ngành du lịch. Đáp án A nắm bắt chính xác ý chính này.</div></div>
-    </div>
-  </div>
-
-  <div class="divider"></div>
-
-  <!-- Managing Time Section Q30–35 -->
-  <div class="section-header">
-    <div class="section-icon icon-orange">⏰</div>
-    <div>
-      <div class="section-title">Điền từ – How to Manage Your Time Wisely (Câu 30–35)</div>
-      <div class="section-sub">Unit 7: Quản lý thời gian cho học sinh độc lập</div>
-    </div>
-  </div>
-
-  <div class="passage-box">
-    <div class="passage-title">📄 Đoạn văn gốc – How to Manage Your Time Wisely</div>
-    <p>Managing your time properly is essential for a stable and secure independent life. (30)___ many young people struggle with scheduling and give up their study plans sooner or later, eventually leading (31)___ overworking and mental stress. Here are some tips to well manage your daily routine:</p>
-    <p>• Keep (33)___ within your achievable range.<br>
-    • Track your schedule carefully to avoid (34)___ time spent on unnecessary social media scrolling.<br>
-    • Prioritise things that bring you lasting knowledge and academic security to get your time's (35)___<br>
-    • Prioritise some of your tasks if possible.<br>
-    • Have a planner with an increasing amount of free time (32)___ week by setting realistic study goals.</p>
-  </div>
-
-  <!-- Q30 -->
-  <div class="q-card">
-    <div class="q-header" onclick="toggle(this)">
-      <div class="q-num fill">Q30</div>
-      <div class="q-text">
-        <div class="q-en"><strong>(30)___</strong> many young people struggle with scheduling...</div>
-        <div class="q-vi"><strong>(30)___</strong> nhiều bạn trẻ gặp khó khăn với việc lên lịch...</div>
-      </div>
-      <div class="q-toggle">⌄</div>
-    </div>
-    <div class="q-body">
-      <div class="options-grid">
-        <div class="opt wrong"><span class="opt-label">A</span><div class="opt-content"><div class="opt-en">However</div><div class="opt-vi">Tuy nhiên</div></div></div>
-        <div class="opt wrong"><span class="opt-label">B</span><div class="opt-content"><div class="opt-en">Otherwise</div><div class="opt-vi">Nếu không thì</div></div></div>
-        <div class="opt wrong"><span class="opt-label">C</span><div class="opt-content"><div class="opt-en">Though</div><div class="opt-vi">Mặc dù</div></div></div>
-        <div class="opt correct"><span class="opt-label">D</span><div class="opt-content"><div class="opt-en">While ✓</div><div class="opt-vi">Trong khi</div></div></div>
-      </div>
-      <div class="answer-box"><div class="answer-icon">✅</div><div class="answer-text"><strong>Đáp án: A – However</strong><br>Câu trước nói quản lý thời gian là "essential", câu sau nói nhiều bạn trẻ vẫn gặp khó khăn → cần từ tương phản. "However" = tuy nhiên, phù hợp nhất.</div></div>
-    </div>
-  </div>
-
-  <!-- Q31 -->
-  <div class="q-card">
-    <div class="q-header" onclick="toggle(this)">
-      <div class="q-num fill">Q31</div>
-      <div class="q-text">
-        <div class="q-en">...eventually leading <strong>(31)___</strong> overworking and mental stress.</div>
-        <div class="q-vi">...cuối cùng dẫn <strong>(31)___</strong> làm việc quá sức và căng thẳng tinh thần.</div>
-      </div>
-      <div class="q-toggle">⌄</div>
-    </div>
-    <div class="q-body">
-      <div class="options-grid">
-        <div class="opt wrong"><span class="opt-label">A</span><div class="opt-content"><div class="opt-en">on</div><div class="opt-vi">trên</div></div></div>
-        <div class="opt wrong"><span class="opt-label">B</span><div class="opt-content"><div class="opt-en">at</div><div class="opt-vi">tại</div></div></div>
-        <div class="opt wrong"><span class="opt-label">C</span><div class="opt-content"><div class="opt-en">in</div><div class="opt-vi">trong</div></div></div>
-        <div class="opt correct"><span class="opt-label">D</span><div class="opt-content"><div class="opt-en">to ✓</div><div class="opt-vi">đến</div></div></div>
-      </div>
-      <div class="answer-box"><div class="answer-icon">✅</div><div class="answer-text"><strong>Đáp án: D – to</strong><br>Cụm cố định: <code>lead to + danh từ</code> = dẫn đến. "Leading to overworking" = dẫn đến làm việc quá sức.</div></div>
-    </div>
-  </div>
-
-  <!-- Q32 -->
-  <div class="q-card">
-    <div class="q-header" onclick="toggle(this)">
-      <div class="q-num fill">Q32</div>
-      <div class="q-text">
-        <div class="q-en">Have a planner with an increasing amount of free time <strong>(32)___</strong> week by setting realistic study goals.</div>
-        <div class="q-vi">Có một cuốn lịch với lượng thời gian rảnh ngày càng tăng <strong>(32)___</strong> tuần bằng cách đặt mục tiêu học tập thực tế.</div>
-      </div>
-      <div class="q-toggle">⌄</div>
-    </div>
-    <div class="q-body">
-      <div class="options-grid">
-        <div class="opt wrong"><span class="opt-label">A</span><div class="opt-content"><div class="opt-en">many</div><div class="opt-vi">nhiều</div></div></div>
-        <div class="opt wrong"><span class="opt-label">B</span><div class="opt-content"><div class="opt-en">some</div><div class="opt-vi">một số</div></div></div>
-        <div class="opt wrong"><span class="opt-label">C</span><div class="opt-content"><div class="opt-en">much</div><div class="opt-vi">nhiều (không đếm được)</div></div></div>
-        <div class="opt correct"><span class="opt-label">D</span><div class="opt-content"><div class="opt-en">each ✓</div><div class="opt-vi">mỗi</div></div></div>
-      </div>
-      <div class="answer-box"><div class="answer-icon">✅</div><div class="answer-text"><strong>Đáp án: D – each</strong><br>"Each week" = mỗi tuần. Đây là cụm thời gian cố định. "Each/every + danh từ số ít" = mỗi.</div></div>
-    </div>
-  </div>
-
-  <!-- Q33 -->
-  <div class="q-card">
-    <div class="q-header" onclick="toggle(this)">
-      <div class="q-num fill">Q33</div>
-      <div class="q-text">
-        <div class="q-en">Keep <strong>(33)___</strong> within your achievable range.</div>
-        <div class="q-vi">Hãy giữ <strong>(33)___</strong> trong phạm vi có thể đạt được của bạn.</div>
-      </div>
-      <div class="q-toggle">⌄</div>
-    </div>
-    <div class="q-body">
-      <div class="options-grid">
-        <div class="opt correct"><span class="opt-label">A</span><div class="opt-content"><div class="opt-en">worth ✓</div><div class="opt-vi">giá trị, đáng giá</div></div></div>
-        <div class="opt wrong"><span class="opt-label">B</span><div class="opt-content"><div class="opt-en">price</div><div class="opt-vi">giá cả</div></div></div>
-        <div class="opt wrong"><span class="opt-label">C</span><div class="opt-content"><div class="opt-en">rate</div><div class="opt-vi">tỷ lệ, tốc độ</div></div></div>
-        <div class="opt wrong"><span class="opt-label">D</span><div class="opt-content"><div class="opt-en">cost</div><div class="opt-vi">chi phí</div></div></div>
-      </div>
-      <div class="answer-box"><div class="answer-icon">✅</div><div class="answer-text"><strong>Đáp án: A – worth (possessive: A)</strong><br>Theo đề, Q33 = A (worth / possessive pronoun). "Keep worth" → trong ngữ cảnh này, đáp án A là "possessive" (sở hữu cách). Câu đầy đủ: "Keep (your goals) within your achievable range."</div></div>
-    </div>
-  </div>
-
-  <!-- Q34 -->
-  <div class="q-card">
-    <div class="q-header" onclick="toggle(this)">
-      <div class="q-num fill">Q34</div>
-      <div class="q-text">
-        <div class="q-en">...to avoid <strong>(34)___</strong> time spent on unnecessary social media scrolling.</div>
-        <div class="q-vi">...để tránh <strong>(34)___</strong> thời gian lãng phí vào việc lướt mạng xã hội không cần thiết.</div>
-      </div>
-      <div class="q-toggle">⌄</div>
-    </div>
-    <div class="q-body">
-      <div class="options-grid">
-        <div class="opt wrong"><span class="opt-label">A</span><div class="opt-content"><div class="opt-en">possessive</div><div class="opt-vi">sở hữu</div></div></div>
-        <div class="opt wrong"><span class="opt-label">B</span><div class="opt-content"><div class="opt-en">restrictive</div><div class="opt-vi">hạn chế</div></div></div>
-        <div class="opt wrong"><span class="opt-label">C</span><div class="opt-content"><div class="opt-en">objective</div><div class="opt-vi">khách quan</div></div></div>
-        <div class="opt correct"><span class="opt-label">D</span><div class="opt-content"><div class="opt-en">excessive ✓</div><div class="opt-vi">quá mức, thái quá</div></div></div>
-      </div>
-      <div class="answer-box"><div class="answer-icon">✅</div><div class="answer-text"><strong>Đáp án: D – excessive</strong><br>"Excessive time" = thời gian quá mức. Phù hợp với ngữ cảnh cảnh báo dành quá nhiều thời gian cho mạng xã hội.</div></div>
-    </div>
-  </div>
-
-  <!-- Q35 -->
-  <div class="q-card">
-    <div class="q-header" onclick="toggle(this)">
-      <div class="q-num fill">Q35</div>
-      <div class="q-text">
-        <div class="q-en">Prioritise things that bring you lasting knowledge and academic security to get your time's <strong>(35)___</strong>.</div>
-        <div class="q-vi">Ưu tiên những thứ mang lại kiến thức bền vững để tận dụng tối đa <strong>(35)___</strong> thời gian của bạn.</div>
-      </div>
-      <div class="q-toggle">⌄</div>
-    </div>
-    <div class="q-body">
-      <div class="options-grid">
-        <div class="opt wrong"><span class="opt-label">A</span><div class="opt-content"><div class="opt-en">Precise application of focus...</div><div class="opt-vi">Ứng dụng chính xác của sự tập trung...</div></div></div>
-        <div class="opt wrong"><span class="opt-label">B</span><div class="opt-content"><div class="opt-en">There is an increase in parental reliance...</div><div class="opt-vi">Có sự gia tăng sự phụ thuộc vào cha mẹ...</div></div></div>
-        <div class="opt wrong"><span class="opt-label">C</span><div class="opt-content"><div class="opt-en">Fewer choices are deliberately confined</div><div class="opt-vi">Ít lựa chọn hơn bị cố ý giới hạn</div></div></div>
-        <div class="opt correct"><span class="opt-label">D</span><div class="opt-content"><div class="opt-en">parental reliance ✓ / "worth"</div><div class="opt-vi">sự phụ thuộc vào cha mẹ / giá trị</div></div></div>
-      </div>
-      <div class="answer-box"><div class="answer-icon">✅</div><div class="answer-text"><strong>Đáp án: C – "worth" (Q35 = C)</strong><br>"Get your time's worth" = xứng đáng với thời gian bỏ ra. Đây là thành ngữ quen thuộc: "get one's money/time's worth".</div></div>
-    </div>
+  <div class="reason-box">
+    <strong>Từ vựng tính từ quan trọng</strong>
+    crucial / essential / vital / critical = cực kỳ quan trọng, thiết yếu<br>
+    Cấu trúc: <strong>It is + adj + to + V</strong> = Điều [adj] là phải làm gì
   </div>
 </div>
 
-<div class="divider"></div>
-
-<!-- ===== PHẦN 5: FILL IN BLANK – UNIVERSITY SORTING (Q36–40) ===== -->
-<div>
-  <div class="section-header">
-    <div class="section-icon icon-purple">📝</div>
-    <div>
-      <div class="section-title">Điền từ – University Course Sorting (Câu 36–40)</div>
-      <div class="section-sub">Bài đọc về hành vi chọn ngành đại học của học sinh</div>
+<!-- Q5 -->
+<div class="question-card" id="q5">
+  <div class="q-header">
+    <span class="q-num">Q·05</span>
+    <div class="q-context">Cấu trúc: <em>ask sb ___ advice</em> → giới từ đi với "advice"</div>
+  </div>
+  <div class="tip-row">ask someone FOR something = hỏi ai đó về / xin ai đó cái gì</div>
+  <div class="options-grid">
+    <div class="option wrong">
+      <span class="opt-letter">A</span>
+      <div><div class="opt-text">for</div><div class="opt-viet">ask for advice = xin lời khuyên ✓</div></div>
+      <span class="opt-tag tag-correct">✓ Đáp án</span>
+    </div>
+    <div class="option wrong">
+      <span class="opt-letter">B</span>
+      <div><div class="opt-text">in</div><div class="opt-viet">sai giới từ</div></div>
+      <span class="opt-tag tag-wrong">Loại</span>
+    </div>
+    <div class="option wrong">
+      <span class="opt-letter">C</span>
+      <div><div class="opt-text">on</div><div class="opt-viet">sai giới từ</div></div>
+      <span class="opt-tag tag-wrong">Loại</span>
+    </div>
+    <div class="option wrong">
+      <span class="opt-letter">D</span>
+      <div><div class="opt-text">at</div><div class="opt-viet">sai giới từ</div></div>
+      <span class="opt-tag tag-wrong">Loại</span>
     </div>
   </div>
-
-  <div class="passage-box">
-    <div class="passage-title">📄 Đoạn văn – Sorting Through University Courses</div>
-    <p>The process of sorting through the various university courses on offer and determining which is the best for you is inevitably complex and individual personality traits will determine the eventual decision. Some students undertake a process of extensive problem solving, in which information is sought about a series of degrees, <strong>(36)</strong> for the sake of their convenience rather than trying to guarantee that they pursue the best possible degree. This is known as limited problem solving. Many students engage in routinised response behaviour, in which choices change relatively little over time. <strong>(38)</strong>, a pattern of behaviour that is becoming increasingly prevalent – to the dismay of the career advisors, who then have less scope for forward planning and reduced opportunities to gain from investing time in the short term; <strong>(40)</strong>, where 'unwanted degrees' can be stimulated by late availability and this can be dropped at short notice.</p>
-  </div>
-
-  <!-- Q36 -->
-  <div class="q-card">
-    <div class="q-header" onclick="toggle(this)">
-      <div class="q-num fill">Q36</div>
-      <div class="q-text">
-        <div class="q-en"><strong>(36)___</strong> – describing how students evaluate degrees</div>
-        <div class="q-vi"><strong>(36)___</strong> – mô tả cách học sinh đánh giá các bằng cấp</div>
-      </div>
-      <div class="q-toggle">⌄</div>
-    </div>
-    <div class="q-body">
-      <div class="options-grid">
-        <div class="opt correct"><span class="opt-label">A</span><div class="opt-content"><div class="opt-en">each of which is evaluated and compared with similar degrees ✓</div><div class="opt-vi">mỗi loại trong số đó được đánh giá và so sánh với các bằng cấp tương tự</div></div></div>
-        <div class="opt wrong"><span class="opt-label">B</span><div class="opt-content"><div class="opt-en">every one of them undergoes evaluations and comparisons with similar courses</div><div class="opt-vi">mỗi một trong số chúng trải qua đánh giá và so sánh với các khóa học tương tự</div></div></div>
-        <div class="opt wrong"><span class="opt-label">C</span><div class="opt-content"><div class="opt-en">when it is similarly evaluated and compared with other courses</div><div class="opt-vi">khi nó được đánh giá và so sánh tương tự với các khóa học khác</div></div></div>
-        <div class="opt wrong"><span class="opt-label">D</span><div class="opt-content"><div class="opt-en">those with similarities to other courses will be evaluated and compared carefully</div><div class="opt-vi">những khóa học có điểm tương đồng với các khóa khác sẽ được đánh giá cẩn thận</div></div></div>
-      </div>
-      <div class="answer-box"><div class="answer-icon">✅</div><div class="answer-text"><strong>Đáp án: A</strong><br>"each of which" = mệnh đề quan hệ không xác định, bổ sung thông tin cho "a series of degrees". Cấu trúc ngữ pháp: <code>degrees, each of which is evaluated...</code> → A đúng cả về nghĩa và ngữ pháp.</div></div>
-    </div>
-  </div>
-
-  <!-- Q37 -->
-  <div class="q-card">
-    <div class="q-header" onclick="toggle(this)">
-      <div class="q-num fill">Q37</div>
-      <div class="q-text">
-        <div class="q-en">Question 37: school-leavers who have been content with a particular vocational school or college in the past may opt for the same institution again. Finally, some students will apply on impulse. <strong>(39)___</strong></div>
-        <div class="q-vi">Câu 37 hỏi về sở thích điền trống (39) trong bài đọc.</div>
-      </div>
-      <div class="q-toggle">⌄</div>
-    </div>
-    <div class="q-body">
-      <div class="options-grid">
-        <div class="opt wrong"><span class="opt-label">A</span><div class="opt-content"><div class="opt-en">be deliberate to confine themselves to a small number of choices</div><div class="opt-vi">cố tình giới hạn với ít lựa chọn</div></div></div>
-        <div class="opt wrong"><span class="opt-label">B</span><div class="opt-content"><div class="opt-en">being deliberately confined themselves to fewer choices</div><div class="opt-vi">bị giới hạn cố ý với ít lựa chọn hơn</div></div></div>
-        <div class="opt correct"><span class="opt-label">C</span><div class="opt-content"><div class="opt-en">will deliberately confine themselves to a small number of choices ✓</div><div class="opt-vi">sẽ cố ý giới hạn bản thân với ít lựa chọn</div></div></div>
-        <div class="opt wrong"><span class="opt-label">D</span><div class="opt-content"><div class="opt-en">fewer choices are deliberately confined to themselves</div><div class="opt-vi">ít lựa chọn hơn bị cố ý giới hạn cho bản thân</div></div></div>
-      </div>
-      <div class="answer-box"><div class="answer-icon">✅</div><div class="answer-text"><strong>Đáp án: C</strong><br>Chủ ngữ ngầm là "students" (số nhiều), cần động từ "will confine" (tương lai). "Deliberately confine themselves to a small number of choices" = cố ý giới hạn bản thân với ít lựa chọn → C đúng.</div></div>
-    </div>
-  </div>
-
-  <!-- Q38 -->
-  <div class="q-card">
-    <div class="q-header" onclick="toggle(this)">
-      <div class="q-num fill">Q38</div>
-      <div class="q-text">
-        <div class="q-en"><strong>(38)___</strong> – fills the blank describing "a pattern of behaviour that is becoming increasingly prevalent"</div>
-        <div class="q-vi"><strong>(38)___</strong> – điền vào chỗ trống mô tả "một mô hình hành vi ngày càng phổ biến"</div>
-      </div>
-      <div class="q-toggle">⌄</div>
-    </div>
-    <div class="q-body">
-      <div class="options-grid">
-        <div class="opt wrong"><span class="opt-label">A</span><div class="opt-content"><div class="opt-en">Also</div><div class="opt-vi">Ngoài ra</div></div></div>
-        <div class="opt correct"><span class="opt-label">B</span><div class="opt-content"><div class="opt-en">It is, in fact ✓</div><div class="opt-vi">Thực ra là</div></div></div>
-        <div class="opt wrong"><span class="opt-label">C</span><div class="opt-content"><div class="opt-en">However</div><div class="opt-vi">Tuy nhiên</div></div></div>
-        <div class="opt wrong"><span class="opt-label">D</span><div class="opt-content"><div class="opt-en">Therefore</div><div class="opt-vi">Vì vậy</div></div></div>
-      </div>
-      <div class="answer-box"><div class="answer-icon">✅</div><div class="answer-text"><strong>Đáp án: B – "It is, in fact"</strong><br>Đây là cách nhấn mạnh và xác nhận thực tế: "It is, in fact, a pattern of behaviour..." = thực ra đây là một mô hình hành vi... → phù hợp nhất về nghĩa và ngữ cảnh.</div></div>
-    </div>
-  </div>
-
-  <!-- Q39 -->
-  <div class="q-card">
-    <div class="q-header" onclick="toggle(this)">
-      <div class="q-num fill">Q39</div>
-      <div class="q-text">
-        <div class="q-en">Some students will apply on impulse. <strong>(39)___</strong></div>
-        <div class="q-vi">Một số học sinh sẽ đăng ký theo bốc đồng. <strong>(39)___</strong></div>
-      </div>
-      <div class="q-toggle">⌄</div>
-    </div>
-    <div class="q-body">
-      <div class="options-grid">
-        <div class="opt wrong"><span class="opt-label">A</span><div class="opt-content"><div class="opt-en">The courses cost little, which means they are better known and more favoured by typical applicants</div><div class="opt-vi">Các khóa học tốn ít tiền, nghĩa là chúng được biết đến nhiều hơn</div></div></div>
-        <div class="opt wrong"><span class="opt-label">B</span><div class="opt-content"><div class="opt-en">While this is more typical of courses costing little, it is by no means unknown among university applicants</div><div class="opt-vi">Điều này phổ biến hơn với các khóa học rẻ, nhưng không phải là không phổ biến với người đăng ký đại học</div></div></div>
-        <div class="opt wrong"><span class="opt-label">C</span><div class="opt-content"><div class="opt-en">It doesn't matter whether courses are unknown, it is typical of applicants to have courses costing little</div><div class="opt-vi">Không quan trọng các khóa có nổi tiếng không, điều đó phổ biến với người đăng ký</div></div></div>
-        <div class="opt correct"><span class="opt-label">D</span><div class="opt-content"><div class="opt-en">In the meantime, courses costing little are known to be courses typically favoured by many applicants ✓</div><div class="opt-vi">Trong khi đó, các khóa học rẻ được biết là được nhiều người đăng ký ưa thích</div></div></div>
-      </div>
-      <div class="answer-box"><div class="answer-icon">✅</div><div class="answer-text"><strong>Đáp án: D</strong><br>Câu (39) cần bổ sung thêm thông tin về hành vi bốc đồng (impulse). "In the meantime, courses costing little are known to be typically favoured" → hợp lý vì học sinh bốc đồng thường chọn khóa học rẻ, dễ tiếp cận.</div></div>
-    </div>
-  </div>
-
-  <!-- Q40 -->
-  <div class="q-card">
-    <div class="q-header" onclick="toggle(this)">
-      <div class="q-num fill">Q40</div>
-      <div class="q-text">
-        <div class="q-en"><strong>(40)___</strong> where 'unwanted degrees' can be stimulated by late availability...</div>
-        <div class="q-vi"><strong>(40)___</strong> – nơi các "ngành không mong muốn" có thể được kích thích bởi việc còn chỉ tiêu muộn...</div>
-      </div>
-      <div class="q-toggle">⌄</div>
-    </div>
-    <div class="q-body">
-      <div class="options-grid">
-        <div class="opt wrong"><span class="opt-label">A</span><div class="opt-content"><div class="opt-en">Though such trait of impulse choosing proves to be valuable</div><div class="opt-vi">Dù đặc điểm chọn bốc đồng này tỏ ra có giá trị</div></div></div>
-        <div class="opt wrong"><span class="opt-label">B</span><div class="opt-content"><div class="opt-en">So valuable is such choosing trait that it proves to be impulsive</div><div class="opt-vi">Đặc điểm chọn lựa đó rất có giá trị đến mức nó tỏ ra bốc đồng</div></div></div>
-        <div class="opt wrong"><span class="opt-label">C</span><div class="opt-content"><div class="opt-en">Such trait is so impulsive that it proves to be valuable to applicants</div><div class="opt-vi">Đặc điểm đó bốc đồng đến mức tỏ ra có giá trị với người nộp đơn</div></div></div>
-        <div class="opt correct"><span class="opt-label">D</span><div class="opt-content"><div class="opt-en">Such impulse choosing proves to be a risky trait, though ✓</div><div class="opt-vi">Tuy nhiên, việc chọn theo bốc đồng như vậy hóa ra là một đặc điểm rủi ro</div></div></div>
-      </div>
-      <div class="answer-box"><div class="answer-icon">✅</div><div class="answer-text"><strong>Đáp án: D</strong><br>Cần câu kết thúc ý về hành vi bốc đồng với hàm ý cảnh báo/nhấn mạnh. "Such impulse choosing proves to be a risky trait, <em>though</em>" → "though" ở cuối câu = tuy nhiên, tạo sự chuyển ý. Câu này hoàn thiện ý: đăng ký bốc đồng dẫn đến "unwanted degrees" → đó là đặc điểm rủi ro.</div></div>
-    </div>
+  <div class="reason-box">
+    <strong>Cụm động từ cố định (Collocation)</strong>
+    ask <strong>for</strong> advice · apply <strong>for</strong> a job · look <strong>for</strong> something<br>
+    → "for" thường đi với các động từ xin/tìm kiếm
   </div>
 </div>
 
-<div class="divider"></div>
-
-<!-- ===== BẢNG ĐÁP ÁN TỔNG HỢP ===== -->
-<div id="summary">
-  <div class="section-header">
-    <div class="section-icon icon-blue">📊</div>
-    <div>
-      <div class="section-title">Bảng đáp án tổng hợp – Tất cả 40 câu</div>
-      <div class="section-sub">Tổng hợp nhanh toàn bộ đáp án đúng</div>
+<!-- Q6 -->
+<div class="question-card" id="q6">
+  <div class="q-header">
+    <span class="q-num">Q·06</span>
+    <div class="q-context">Cấu trúc: <em>helps you ___ your career goals</em> → động từ theo sau "help sb"</div>
+  </div>
+  <div class="tip-row">help sb (to) V = giúp ai làm gì → cần nguyên thể. Nghĩa: "đạt được mục tiêu"</div>
+  <div class="options-grid">
+    <div class="option correct">
+      <span class="opt-letter">A</span>
+      <div><div class="opt-text">achieve</div><div class="opt-viet">đạt được (mục tiêu) ✓</div></div>
+      <span class="opt-tag tag-correct">✓ Đáp án</span>
+    </div>
+    <div class="option wrong">
+      <span class="opt-letter">B</span>
+      <div><div class="opt-text">abandon</div><div class="opt-viet">từ bỏ — sai nghĩa hoàn toàn</div></div>
+      <span class="opt-tag tag-wrong">Loại</span>
+    </div>
+    <div class="option wrong">
+      <span class="opt-letter">C</span>
+      <div><div class="opt-text">prevent</div><div class="opt-viet">ngăn chặn — sai nghĩa</div></div>
+      <span class="opt-tag tag-wrong">Loại</span>
+    </div>
+    <div class="option wrong">
+      <span class="opt-letter">D</span>
+      <div><div class="opt-text">destroy</div><div class="opt-viet">phá hủy — sai nghĩa</div></div>
+      <span class="opt-tag tag-wrong">Loại</span>
     </div>
   </div>
+  <div class="reason-box">
+    <strong>Từ vựng + cấu trúc</strong>
+    <strong>achieve goals/dreams</strong> = đạt được mục tiêu/ước mơ (collocation phổ biến)<br>
+    <strong>help sb (to) V</strong> = giúp ai đó làm gì (to có thể bỏ)
+  </div>
+</div>
+```
 
-  <table class="summary-table">
-    <thead>
-      <tr>
-        <th>Câu</th><th>Đáp án</th><th>Nội dung chính</th><th>Phần</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td>Q1</td><td><span class="ans-tag">D</span></td><td>settle = decide (quyết định)</td><td>Reading 1</td></tr>
-      <tr><td>Q2</td><td><span class="ans-tag">D</span></td><td>NOT mentioned: tasks important daily</td><td>Reading 1</td></tr>
-      <tr><td>Q3</td><td><span class="ans-tag">D</span></td><td>their → habit trackers</td><td>Reading 1</td></tr>
-      <tr><td>Q4</td><td><span class="ans-tag">A</span></td><td>Paraphrase câu gạch chân đoạn 2</td><td>Reading 1</td></tr>
-      <tr><td>Q5</td><td><span class="ans-tag">C</span></td><td>slashing ↔ increasing (trái nghĩa)</td><td>Reading 1</td></tr>
-      <tr><td>Q6</td><td><span class="ans-tag">B</span></td><td>Inferred from paragraph 4</td><td>Reading 1</td></tr>
-      <tr><td>Q7</td><td><span class="ans-tag green">B</span></td><td>Para 3 – screen time & distractions</td><td>Reading 1</td></tr>
-      <tr><td>Q8</td><td><span class="ans-tag green">A</span></td><td>Para 4 – chores & allowances</td><td>Reading 1</td></tr>
-      <tr><td>Q9</td><td><span class="ans-tag orange">C</span></td><td>number (đếm được)</td><td>Fill in</td></tr>
-      <tr><td>Q10</td><td><span class="ans-tag orange">A</span></td><td>event (danh từ)</td><td>Fill in</td></tr>
-      <tr><td>Q11</td><td><span class="ans-tag orange">A</span></td><td>managed</td><td>Fill in</td></tr>
-      <tr><td>Q12</td><td><span class="ans-tag orange">A</span></td><td>top candidates</td><td>Fill in</td></tr>
-      <tr><td>Q13</td><td><span class="ans-tag orange">A</span></td><td>who (đại từ quan hệ)</td><td>Fill in</td></tr>
-      <tr><td>Q14</td><td><span class="ans-tag orange">A</span></td><td>build up</td><td>Fill in</td></tr>
-      <tr><td>Q15</td><td><span class="ans-tag purple">d→a→b→e→c</span></td><td>Sắp xếp – quản lý tài chính</td><td>Arrange</td></tr>
-      <tr><td>Q16</td><td><span class="ans-tag purple">c→a→b→d</span></td><td>Hội thoại – online vs traditional</td><td>Arrange</td></tr>
-      <tr><td>Q17</td><td><span class="ans-tag purple">b→c→a</span></td><td>Hội thoại – việc nhà</td><td>Arrange</td></tr>
-      <tr><td>Q18</td><td><span class="ans-tag purple">d→a→b→c→e</span></td><td>Thư trang trọng – học bổng</td><td>Arrange</td></tr>
-      <tr><td>Q19</td><td><span class="ans-tag">A</span></td><td>Thứ tự đoạn Heritage-Washing</td><td>Reading 2</td></tr>
-      <tr><td>Q20</td><td><span class="ans-tag">B</span></td><td>4 packages claimed → delays without solving</td><td>Reading 2</td></tr>
-      <tr><td>Q21</td><td><span class="ans-tag">C</span></td><td>manipulated = purposely adjusted</td><td>Reading 2</td></tr>
-      <tr><td>Q22</td><td><span class="ans-tag">D</span></td><td>Tóm tắt đoạn 2 – buzzwords in travel</td><td>Reading 2</td></tr>
-      <tr><td>Q23</td><td><span class="ans-tag">A</span></td><td>Public concern about destruction</td><td>Reading 2</td></tr>
-      <tr><td>Q24</td><td><span class="ans-tag">A</span></td><td>Enforcement falls behind creativity</td><td>Reading 2</td></tr>
-      <tr><td>Q25</td><td><span class="ans-tag">D</span></td><td>the practice = heritage-washing</td><td>Reading 2</td></tr>
-      <tr><td>Q26</td><td><span class="ans-tag">B</span></td><td>scrutiny (giám sát)</td><td>Reading 2</td></tr>
-      <tr><td>Q27</td><td><span class="ans-tag">C</span></td><td>Heritage-washing creates false illusion</td><td>Reading 2</td></tr>
-      <tr><td>Q28</td><td><span class="ans-tag">A</span></td><td>Insert sentence – position [i]</td><td>Reading 2</td></tr>
-      <tr><td>Q29</td><td><span class="ans-tag">A</span></td><td>Best summary of passage</td><td>Reading 2</td></tr>
-      <tr><td>Q30</td><td><span class="ans-tag orange">A</span></td><td>However (tương phản)</td><td>Fill in</td></tr>
-      <tr><td>Q31</td><td><span class="ans-tag orange">D</span></td><td>lead to (giới từ)</td><td>Fill in</td></tr>
-      <tr><td>Q32</td><td><span class="ans-tag orange">D</span></td><td>each week</td><td>Fill in</td></tr>
-      <tr><td>Q33</td><td><span class="ans-tag orange">A</span></td><td>worth / possessive</td><td>Fill in</td></tr>
-      <tr><td>Q34</td><td><span class="ans-tag orange">D</span></td><td>excessive time</td><td>Fill in</td></tr>
-      <tr><td>Q35</td><td><span class="ans-tag orange">C</span></td><td>get your time's worth</td><td>Fill in</td></tr>
-      <tr><td>Q36</td><td><span class="ans-tag green">A</span></td><td>each of which is evaluated...</td><td>Fill in</td></tr>
-      <tr><td>Q37</td><td><span class="ans-tag green">C</span></td><td>will deliberately confine themselves</td><td>Fill in</td></tr>
-      <tr><td>Q38</td><td><span class="ans-tag green">B</span></td><td>It is, in fact</td><td>Fill in</td></tr>
-      <tr><td>Q39</td><td><span class="ans-tag green">D</span></td><td>In the meantime, courses costing little...</td><td>Fill in</td></tr>
-      <tr><td>Q40</td><td><span class="ans-tag green">D</span></td><td>Such impulse choosing proves risky, though</td><td>Fill in</td></tr>
-    </tbody>
-  </table>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ======================== SECTION 2 ======================== -->
+
+  <div id="s2">
+    <div class="section-header">
+      <span class="badge">Fill in blank</span>
+      <h2>Câu 7–12 · Tin tức: Discover the Ancient Citadel Tour 2026</h2>
+    </div>
+
+```
+<!-- Q7 -->
+<div class="question-card" id="q7">
+  <div class="q-header">
+    <span class="q-num">Q·07</span>
+    <div class="q-context">Cấu trúc: <em>With ___ fascinating historical artifacts on display</em> → lượng từ trước danh từ đếm được số nhiều</div>
+  </div>
+  <div class="tip-row">"artifacts" = danh từ đếm được số nhiều → cần lượng từ phù hợp</div>
+  <div class="options-grid">
+    <div class="option correct">
+      <span class="opt-letter">A</span>
+      <div><div class="opt-text">many</div><div class="opt-viet">nhiều — dùng với danh từ đếm được số nhiều ✓</div></div>
+      <span class="opt-tag tag-correct">✓ Đáp án</span>
+    </div>
+    <div class="option wrong">
+      <span class="opt-letter">B</span>
+      <div><div class="opt-text">much</div><div class="opt-viet">nhiều — chỉ dùng với danh từ không đếm được</div></div>
+      <span class="opt-tag tag-wrong">Loại</span>
+    </div>
+    <div class="option wrong">
+      <span class="opt-letter">C</span>
+      <div><div class="opt-text">every</div><div class="opt-viet">mỗi — dùng với danh từ số ít</div></div>
+      <span class="opt-tag tag-wrong">Loại</span>
+    </div>
+    <div class="option wrong">
+      <span class="opt-letter">D</span>
+      <div><div class="opt-text">another</div><div class="opt-viet">một cái khác — dùng với danh từ số ít</div></div>
+      <span class="opt-tag tag-wrong">Loại</span>
+    </div>
+  </div>
+  <div class="reason-box">
+    <strong>Lượng từ</strong>
+    <strong>many</strong> + đếm được số nhiều &nbsp;|&nbsp; <strong>much</strong> + không đếm được &nbsp;|&nbsp; <strong>a lot of / lots of</strong> = cả hai
+  </div>
 </div>
 
-</div><!-- end container -->
-
-<div class="footer">
-  Giải đề Tiếng Anh THPT 2026 · Global Success Units 6, 7, 8 · Giải chi tiết + dịch đầy đủ A/B/C/D<br>
-  <span style="color: #58a6ff">✨ Mỗi câu đều có giải thích lý do chọn đáp án và dịch nghĩa đầy đủ</span>
+<!-- Q8 -->
+<div class="question-card" id="q8">
+  <div class="q-header">
+    <span class="q-num">Q·08</span>
+    <div class="q-context">Cấu trúc: <em>The Citadel, ___ by UNESCO as a World Heritage Site in 1993</em> → bị động, thì quá khứ</div>
+  </div>
+  <div class="tip-row">Chủ ngữ "The Citadel" bị công nhận bởi UNESCO → Bị động: was recognized</div>
+  <div class="options-grid">
+    <div class="option correct">
+      <span class="opt-letter">A</span>
+      <div><div class="opt-text">recognized</div><div class="opt-viet">được công nhận — V3 trong mệnh đề rút gọn bị động ✓</div></div>
+      <span class="opt-tag tag-correct">✓ Đáp án</span>
+    </div>
+    <div class="option wrong">
+      <span class="opt-letter">B</span>
+      <div><div class="opt-text">recognizing</div><div class="opt-viet">đang công nhận — chủ động, sai</div></div>
+      <span class="opt-tag tag-wrong">Loại</span>
+    </div>
+    <div class="option wrong">
+      <span class="opt-letter">C</span>
+      <div><div class="opt-text">to recognize</div><div class="opt-viet">để công nhận — sai cấu trúc</div></div>
+      <span class="opt-tag tag-wrong">Loại</span>
+    </div>
+    <div class="option wrong">
+      <span class="opt-letter">D</span>
+      <div><div class="opt-text">recognize</div><div class="opt-viet">công nhận — nguyên thể, sai</div></div>
+      <span class="opt-tag tag-wrong">Loại</span>
+    </div>
+  </div>
+  <div class="reason-box">
+    <strong>Mệnh đề rút gọn bị động</strong>
+    The Citadel, <strong>recognized</strong> by UNESCO... = The Citadel, <strong>which was recognized</strong> by UNESCO...<br>
+    → Khi chủ ngữ "bị" tác động → dùng V3 (past participle) để rút gọn
+  </div>
 </div>
 
-<script>
-function toggle(header) {
-  const card = header.closest('.q-card') || header.closest('.arrange-card');
-  card.classList.toggle('open');
-}
+<!-- Q9 -->
+<div class="question-card" id="q9">
+  <div class="q-header">
+    <span class="q-num">Q·09</span>
+    <div class="q-context">Thứ tự tính từ trong tiếng Anh trước danh từ "structures"</div>
+  </div>
+  <div class="tip-row">Quy tắc: Opinion → Size → Age → Shape → Color → Origin → Material → Purpose + Noun</div>
+  <div class="options-grid">
+    <div class="option wrong">
+      <span class="opt-letter">A</span>
+      <div><div class="opt-text">beautiful old wooden structures</div><div class="opt-viet">đẹp (opinion) → cũ (age) → gỗ (material) ✓</div></div>
+      <span class="opt-tag tag-correct">✓ Đáp án</span>
+    </div>
+    <div class="option wrong">
+      <span class="opt-letter">B</span>
+      <div><div class="opt-text">old beautiful wooden structures</div><div class="opt-viet">age trước opinion — sai thứ tự</div></div>
+      <span class="opt-tag tag-wrong">Loại</span>
+    </div>
+    <div class="option wrong">
+      <span class="opt-letter">C</span>
+      <div><div class="opt-text">wooden beautiful old structures</div><div class="opt-viet">material đứng đầu — sai hoàn toàn</div></div>
+      <span class="opt-tag tag-wrong">Loại</span>
+    </div>
+    <div class="option wrong">
+      <span class="opt-letter">D</span>
+      <div><div class="opt-text">beautiful wooden old structures</div><div class="opt-viet">material trước age — sai thứ tự</div></div>
+      <span class="opt-tag tag-wrong">Loại</span>
+    </div>
+  </div>
+  <div class="reason-box">
+    <strong>Thứ tự tính từ (OSASCOMP)</strong>
+    <strong>O</strong>pinion → <strong>S</strong>ize → <strong>A</strong>ge → <strong>S</strong>hape → <strong>C</strong>olor → <strong>O</strong>rigin → <strong>M</strong>aterial → <strong>P</strong>urpose<br>
+    → beautiful (opinion) · old (age) · wooden (material) → <strong>beautiful old wooden</strong>
+  </div>
+</div>
 
-// Expand All / Collapse All
-function expandAll() {
-  document.querySelectorAll('.q-card, .arrange-card').forEach(c => c.classList.add('open'));
-}
-function collapseAll() {
-  document.querySelectorAll('.q-card, .arrange-card').forEach(c => c.classList.remove('open'));
-}
+<!-- Q10 -->
+<div class="question-card" id="q10">
+  <div class="q-header">
+    <span class="q-num">Q·10</span>
+    <div class="q-context">Cụm động từ: <em>performances that have been ___ from past generations</em> → nghĩa "truyền lại"</div>
+  </div>
+  <div class="tip-row">Tìm phrasal verb có nghĩa "truyền từ đời này sang đời khác"</div>
+  <div class="options-grid">
+    <div class="option correct">
+      <span class="opt-letter">A</span>
+      <div><div class="opt-text">handed down</div><div class="opt-viet">truyền lại (từ thế hệ này sang thế hệ khác) ✓</div></div>
+      <span class="opt-tag tag-correct">✓ Đáp án</span>
+    </div>
+    <div class="option wrong">
+      <span class="opt-letter">B</span>
+      <div><div class="opt-text">looked up</div><div class="opt-viet">tra cứu / ngưỡng mộ — sai nghĩa</div></div>
+      <span class="opt-tag tag-wrong">Loại</span>
+    </div>
+    <div class="option wrong">
+      <span class="opt-letter">C</span>
+      <div><div class="opt-text">taken off</div><div class="opt-viet">cất cánh / cởi ra — sai nghĩa</div></div>
+      <span class="opt-tag tag-wrong">Loại</span>
+    </div>
+    <div class="option wrong">
+      <span class="opt-letter">D</span>
+      <div><div class="opt-text">turned down</div><div class="opt-viet">từ chối / vặn nhỏ — sai nghĩa</div></div>
+      <span class="opt-tag tag-wrong">Loại</span>
+    </div>
+  </div>
+  <div class="reason-box">
+    <strong>Phrasal verbs thường gặp</strong>
+    <strong>hand down</strong> = truyền lại (di sản, truyền thống)<br>
+    <strong>look up</strong> = tra cứu | <strong>take off</strong> = cất cánh, cởi ra | <strong>turn down</strong> = từ chối, vặn nhỏ
+  </div>
+</div>
 
-// Add control bar after TOC
-window.addEventListener('DOMContentLoaded', () => {
-  const container = document.querySelector('.container');
-  const bar = document.createElement('div');
-  bar.className = 'ctrl-bar';
-  bar.innerHTML = `
-    <button class="btn" onclick="expandAll()">📂 Mở tất cả</button>
-    <button class="btn" onclick="collapseAll()">📁 Đóng tất cả</button>
-    <button class="btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">⬆ Lên đầu</button>
-  `;
-  container.insertBefore(bar, container.firstChild);
-});
-</script>
+<!-- Q11 -->
+<div class="question-card" id="q11">
+  <div class="q-header">
+    <span class="q-num">Q·11</span>
+    <div class="q-context">Cấu trúc: <em>make sure to ___ respect</em> → động từ phù hợp + "sure to V"</div>
+  </div>
+  <div class="tip-row">"show respect" = thể hiện sự tôn trọng → collocation cố định</div>
+  <div class="options-grid">
+    <div class="option correct">
+      <span class="opt-letter">A</span>
+      <div><div class="opt-text">show</div><div class="opt-viet">thể hiện sự tôn trọng — show respect ✓</div></div>
+      <span class="opt-tag tag-correct">✓ Đáp án</span>
+    </div>
+    <div class="option wrong">
+      <span class="opt-letter">B</span>
+      <div><div class="opt-text">do</div><div class="opt-viet">làm — không dùng "do respect"</div></div>
+      <span class="opt-tag tag-wrong">Loại</span>
+    </div>
+    <div class="option wrong">
+      <span class="opt-letter">C</span>
+      <div><div class="opt-text">make</div><div class="opt-viet">tạo ra — không dùng "make respect"</div></div>
+      <span class="opt-tag tag-wrong">Loại</span>
+    </div>
+    <div class="option wrong">
+      <span class="opt-letter">D</span>
+      <div><div class="opt-text">take</div><div class="opt-viet">lấy — không dùng "take respect"</div></div>
+      <span class="opt-tag tag-wrong">Loại</span>
+    </div>
+  </div>
+  <div class="reason-box">
+    <strong>Collocation với "respect"</strong>
+    <strong>show</strong> respect · <strong>show</strong> interest · <strong>show</strong> concern → "show" đi với các danh từ trừu tượng chỉ thái độ/cảm xúc
+  </div>
+</div>
+
+<!-- Q12 -->
+<div class="question-card" id="q12">
+  <div class="q-header">
+    <span class="q-num">Q·12</span>
+    <div class="q-context">Cấu trúc: <em>a wonderful ___ for everyone to learn</em> → loại từ (part of speech) phù hợp sau "a wonderful"</div>
+  </div>
+  <div class="tip-row">Sau "a wonderful" cần danh từ. Xem 4 đáp án: đâu là danh từ?</div>
+  <div class="options-grid">
+    <div class="option correct">
+      <span class="opt-letter">A</span>
+      <div><div class="opt-text">opportunity</div><div class="opt-viet">cơ hội (danh từ) ✓ — a wonderful opportunity for sb to V</div></div>
+      <span class="opt-tag tag-correct">✓ Đáp án</span>
+    </div>
+    <div class="option wrong">
+      <span class="opt-letter">B</span>
+      <div><div class="opt-text">opportunist</div><div class="opt-viet">kẻ cơ hội (danh từ chỉ người, sai nghĩa)</div></div>
+      <span class="opt-tag tag-wrong">Loại</span>
+    </div>
+    <div class="option wrong">
+      <span class="opt-letter">C</span>
+      <div><div class="opt-text">opportune</div><div class="opt-viet">thuận tiện (tính từ, sai loại từ)</div></div>
+      <span class="opt-tag tag-wrong">Loại</span>
+    </div>
+    <div class="option wrong">
+      <span class="opt-letter">D</span>
+      <div><div class="opt-text">opportunely</div><div class="opt-viet">một cách thuận tiện (trạng từ, sai loại từ)</div></div>
+      <span class="opt-tag tag-wrong">Loại</span>
+    </div>
+  </div>
+  <div class="reason-box">
+    <strong>Word form (Dạng từ) + Cấu trúc</strong>
+    <strong>a/an + adj + NOUN + for sb + to V</strong> = một [cơ hội] tuyệt vời để ai đó làm gì<br>
+    Nhận biết dạng từ: -ity/-tion = danh từ | -ous/-ful = tính từ | -ly = trạng từ
+  </div>
+</div>
+```
+
+  </div>
+
+  <hr class="divider">
+
+  <!-- ======================== SECTION 3 ======================== -->
+
+  <div id="s3">
+    <div class="section-header">
+      <span class="badge">Sentence Ordering</span>
+      <h2>Câu 13–17 · Sắp xếp câu/đoạn hội thoại</h2>
+    </div>
+
+```
+<!-- Q13 -->
+<div class="question-card ordering-q" id="q13">
+  <div class="q-header">
+    <span class="q-num">Q·13</span>
+    <div class="q-context">Hội thoại: John ghét việc nhà → Mary phản bác → John đồng ý</div>
+  </div>
+  <div class="sentences-list">
+    <div class="sentence-item"><span class="s-label">a.</span> John: I hate doing household chores like washing dishes. They are so boring.</div>
+    <div class="sentence-item"><span class="s-label">b.</span> Mary: Really? I think they actually help us become more independent.</div>
+    <div class="sentence-item"><span class="s-label">c.</span> John: I guess you are right. We learn how to take care of ourselves through them.</div>
+  </div>
+  <div class="order-options">
+    <div class="order-opt wrong">A. a-b-c B. b-a-c</div>
+    <div class="order-opt correct">C. c-b-a</div>
+    <div class="order-opt wrong">D. a-c-b</div>
+  </div>
+  <div class="reason-box">
+    <strong>Cách phân tích</strong>
+    a → mở đầu vấn đề (John phàn nàn) · b → Mary phản bác ("Really?" = phản ứng với a) · c → John đồng ý ("I guess you are right" = đồng ý với b)<br>
+    → Thứ tự tự nhiên: <strong>a → b → c</strong>
+  </div>
+</div>
+
+<!-- Q14 -->
+<div class="question-card ordering-q" id="q14">
+  <div class="q-header">
+    <span class="q-num">Q·14</span>
+    <div class="q-context">Hội thoại 5 lượt: Linda & Peter về học nghề vs đại học</div>
+  </div>
+  <div class="sentences-list">
+    <div class="sentence-item"><span class="s-label">a.</span> Linda: That's a great idea. You can earn money while gaining practical skills.</div>
+    <div class="sentence-item"><span class="s-label">b.</span> Peter: I am not sure if I should go to university or take an apprenticeship.</div>
+    <div class="sentence-item"><span class="s-label">c.</span> Linda: Well, it depends on what you want. Do you prefer hands-on experience?</div>
+    <div class="sentence-item"><span class="s-label">d.</span> Peter: Yes, I really like fixing things rather than reading theoretical books.</div>
+    <div class="sentence-item"><span class="s-label">e.</span> Peter: Exactly! I will start looking for some apprenticeship programs tomorrow.</div>
+  </div>
+  <div class="order-options">
+    <div class="order-opt wrong">A. b-c-d-a-e</div>
+    <div class="order-opt correct">B. b-a-d-c-e ✗</div>
+    <div class="order-opt correct">C. c-b-e-d-a ✗</div>
+    <div class="order-opt correct">D. <strong>b-c-d-a-e ✓</strong></div>
+  </div>
+  <div class="reason-box">
+    <strong>Cách phân tích</strong>
+    b (Peter phân vân) → c (Linda hỏi lại) → d (Peter xác nhận thích thực hành) → a (Linda khuyến khích) → e (Peter quyết định)<br>
+    → Luồng: <strong>vấn đề → hỏi → xác nhận → khuyến khích → quyết định</strong>
+  </div>
+</div>
+
+<!-- Q15 -->
+<div class="question-card ordering-q" id="q15">
+  <div class="q-header">
+    <span class="q-num">Q·15</span>
+    <div class="q-context">Thư: Anna Lee hỏi Mr. Smith về chương trình tình nguyện ở châu Á</div>
+  </div>
+  <div class="sentences-list">
+    <div class="sentence-item"><span class="s-label">a.</span> I am writing to ask for more details about your gap year volunteer programs in Asia.</div>
+    <div class="sentence-item"><span class="s-label">b.</span> First, could you please tell me how long the teaching program in Vietnam lasts?</div>
+    <div class="sentence-item"><span class="s-label">c.</span> Second, I would like to know if accommodation and meals are included in the fee.</div>
+    <div class="sentence-item"><span class="s-label">d.</span> I look forward to receiving your reply soon.</div>
+    <div class="sentence-item"><span class="s-label">e.</span> Thank you very much for your time and assistance.</div>
+  </div>
+  <div class="order-options">
+    <div class="order-opt wrong">A. a-b-c-e-d</div>
+    <div class="order-opt correct">B. <strong>a-b-c-d-e ✓</strong></div>
+    <div class="order-opt wrong">C. c-b-d-e-a</div>
+    <div class="order-opt wrong">D. d-a-e-b-d</div>
+  </div>
+  <div class="reason-box">
+    <strong>Cấu trúc thư trang trọng</strong>
+    a (mục đích viết thư) → b (câu hỏi 1: First...) → c (câu hỏi 2: Second...) → d (kết: mong hồi âm) → e (cảm ơn)<br>
+    Lưu ý: "First... Second..." là tín hiệu thứ tự rõ ràng
+  </div>
+</div>
+
+<!-- Q16 -->
+<div class="question-card ordering-q" id="q16">
+  <div class="q-header">
+    <span class="q-num">Q·16</span>
+    <div class="q-context">Đoạn văn mô tả một ngôi làng cổ</div>
+  </div>
+  <div class="sentences-list">
+    <div class="sentence-item"><span class="s-label">a.</span> The village is well-known for its unique traditional crafts and ancient temples.</div>
+    <div class="sentence-item"><span class="s-label">b.</span> It is highly recommended to visit this historical place during the spring festival.</div>
+    <div class="sentence-item"><span class="s-label">c.</span> Located in the north of the country, the ancient village has been a popular tourist destination.</div>
+    <div class="sentence-item"><span class="s-label">d.</span> Tourists can also taste delicious local dishes while walking around the old streets.</div>
+    <div class="sentence-item"><span class="s-label">e.</span> At night, the village is beautifully illuminated with colorful traditional lanterns.</div>
+  </div>
+  <div class="order-options">
+    <div class="order-opt correct">A. <strong>c-a-d-e-b ✓</strong></div>
+    <div class="order-opt wrong">B. d-b-a-c-e</div>
+    <div class="order-opt wrong">C. a-c-d-b-e</div>
+    <div class="order-opt wrong">D. d-e-a-c-b</div>
+  </div>
+  <div class="reason-box">
+    <strong>Cách phân tích đoạn văn mô tả</strong>
+    c (giới thiệu tổng quan: vị trí, nổi tiếng) → a (chi tiết: nổi tiếng vì gì) → d (thêm trải nghiệm: ẩm thực) → e (cảnh về đêm) → b (khuyến nghị: khi nào nên đến)<br>
+    → Thứ tự: <strong>tổng quan → chi tiết → thêm thông tin → lời khuyên</strong>
+  </div>
+</div>
+
+<!-- Q17 -->
+<div class="question-card ordering-q" id="q17">
+  <div class="q-header">
+    <span class="q-num">Q·17</span>
+    <div class="q-context">Đoạn văn về dạy thanh thiếu niên quản lý tài chính</div>
+  </div>
+  <div class="sentences-list">
+    <div class="sentence-item"><span class="s-label">a.</span> These basic skills allow teenagers to avoid unnecessary debts in the future.</div>
+    <div class="sentence-item"><span class="s-label">b.</span> However, many parents still control their children's daily spending too strictly.</div>
+    <div class="sentence-item"><span class="s-label">c.</span> Nowadays, teaching teenagers how to manage money is becoming very important.</div>
+    <div class="sentence-item"><span class="s-label">d.</span> In conclusion, while parental guidance is needed, teens must practice financial independence.</div>
+    <div class="sentence-item"><span class="s-label">e.</span> Therefore, these over-protected children never learn how to budget their pocket money effectively.</div>
+  </div>
+  <div class="order-options">
+    <div class="order-opt wrong">A. c-a-b-e-d</div>
+    <div class="order-opt correct">B. <strong>c-b-a-e-d... → xem lý do</strong></div>
+    <div class="order-opt correct">C. <strong>c-a-b-e-d ✓</strong></div>
+    <div class="order-opt wrong">D. b-a-e-c-d</div>
+  </div>
+  <div class="reason-box">
+    <strong>Từ nối là chìa khóa</strong>
+    c (đặt vấn đề: ngày nay...) → a (lợi ích: kỹ năng này giúp...) → b (<strong>However</strong>: nhiều cha mẹ lại kiểm soát quá) → e (<strong>Therefore</strong>: hậu quả là...) → d (<strong>In conclusion</strong>: kết luận)<br>
+    → "However / Therefore / In conclusion" là tín hiệu thứ tự quan trọng nhất!
+  </div>
+</div>
+```
+
+  </div>
+
+  <hr class="divider">
+
+  <!-- ======================== SECTION 4 ======================== -->
+
+  <div id="s4">
+    <div class="section-header">
+      <span class="badge">Grammar in context</span>
+      <h2>Câu 18–22 · Passage: A Gap Year</h2>
+    </div>
+
+```
+<div class="passage-box">
+  <strong>Đoạn văn (dịch):</strong> Năm gap year là cơ hội tuyệt vời để học sinh THPT tích lũy kinh nghiệm trước khi vào đại học.
+  <span class="blank">(18)</span>, nhiều bạn trẻ chọn đi du lịch, làm việc bán thời gian hoặc tình nguyện ở nước ngoài. Trong những chuyến đi ý nghĩa này, họ thường là những tình nguyện viên đầu tiên
+  <span class="blank">(19)</span> ở vùng xa. Sống xa nhà không bao giờ dễ. Tuy nhiên, <span class="blank">(20)</span>. Sau một năm thành công, người tham gia cảm thấy vô cùng tự hào <span class="blank">(21)</span>. Cuối cùng, một gap year được hoạch định tốt trang bị cho các bạn trẻ những kỹ năng mềm thực tiễn, <span class="blank">(22)</span>. Bằng cách bước ra khỏi vùng an toàn, các bạn thật sự khám phá được đam mê của mình.
+</div>
+
+<!-- Q18 -->
+<div class="question-card" id="q18">
+  <div class="q-header">
+    <span class="q-num">Q·18</span>
+    <div class="q-context">Đầu câu: <em>"___, many young students choose to travel..."</em> → cấu trúc phân từ hoàn thành hay mệnh đề thời gian?</div>
+  </div>
+  <div class="tip-row">Chủ ngữ câu chính "many young students" thực hiện hành động → chủ động hay bị động?</div>
+  <div class="options-grid">
+    <div class="option correct">
+      <span class="opt-letter">A</span>
+      <div><div class="opt-text">Having finished high school successfully</div><div class="opt-viet">Sau khi hoàn thành THPT thành công → Phân từ hoàn thành chủ động ✓</div></div>
+      <span class="opt-tag tag-correct">✓ Đáp án</span>
+    </div>
+    <div class="option wrong">
+      <span class="opt-letter">B</span>
+      <div><div class="opt-text">To finish high school successfully</div><div class="opt-viet">Để hoàn thành... → sai nghĩa (chỉ mục đích)</div></div>
+      <span class="opt-tag tag-wrong">Loại</span>
+    </div>
+    <div class="option wrong">
+      <span class="opt-letter">C</span>
+      <div><div class="opt-text">Because high school was finished successfully</div><div class="opt-viet">Bởi vì... → sai nghĩa (chỉ nguyên nhân, không tự nhiên)</div></div>
+      <span class="opt-tag tag-wrong">Loại</span>
+    </div>
+    <div class="option wrong">
+      <span class="opt-letter">D</span>
+      <div><div class="opt-text">When finishing high school successfully</div><div class="opt-viet">Khi... → chủ ngữ phải giống nhau, nhưng "high school" không thể "finish" bản thân nó</div></div>
+      <span class="opt-tag tag-wrong">Loại</span>
+    </div>
+  </div>
+  <div class="reason-box">
+    <strong>Phân từ hoàn thành (Perfect Participle)</strong>
+    <strong>Having + V3</strong> = sau khi đã làm gì → hành động xảy ra TRƯỚC hành động chính<br>
+    Dùng khi chủ ngữ của 2 mệnh đề giống nhau và chủ động
+  </div>
+</div>
+
+<!-- Q19 -->
+<div class="question-card" id="q19">
+  <div class="q-header">
+    <span class="q-num">Q·19</span>
+    <div class="q-context">Cấu trúc: <em>"the first volunteers (19)___ in remote areas"</em> → bổ nghĩa cho "volunteers"</div>
+  </div>
+  <div class="tip-row">"the first + N + to V" = người đầu tiên làm gì → cấu trúc cố định!</div>
+  <div class="options-grid">
+    <div class="option wrong">
+      <span class="opt-letter">A</span>
+      <div><div class="opt-text">to work on community projects</div><div class="opt-viet">để làm việc trong dự án cộng đồng → the first to V ✓</div></div>
+      <span class="opt-tag tag-correct">✓ Đáp án</span>
+    </div>
+    <div class="option wrong">
+      <span class="opt-letter">B</span>
+      <div><div class="opt-text">working on community projects</div><div class="opt-viet">đang làm... → không dùng sau "the first"</div></div>
+      <span class="opt-tag tag-wrong">Loại</span>
+    </div>
+    <div class="option wrong">
+      <span class="opt-letter">C</span>
+      <div><div class="opt-text">work on community projects</div><div class="opt-viet">nguyên thể không có "to" → sai</div></div>
+      <span class="opt-tag tag-wrong">Loại</span>
+    </div>
+    <div class="option wrong">
+      <span class="opt-letter">D</span>
+      <div><div class="opt-text">who working on community projects</div><div class="opt-viet">sai ngữ pháp (thiếu "are/were")</div></div>
+      <span class="opt-tag tag-wrong">Loại</span>
+    </div>
+  </div>
+  <div class="reason-box">
+    <strong>Cấu trúc: the + ordinal + N + to V</strong>
+    the <strong>first</strong> person <strong>to arrive</strong> · the <strong>last</strong> one <strong>to leave</strong><br>
+    → Sau "the first/last/only + N" luôn dùng <strong>to + V (infinitive)</strong>
+  </div>
+</div>
+
+<!-- Q20 -->
+<div class="question-card" id="q20">
+  <div class="q-header">
+    <span class="q-num">Q·20</span>
+    <div class="q-context">Sau "However," → mệnh đề hoàn chỉnh, bổ sung ý về thử thách trang bị kỹ năng</div>
+  </div>
+  <div class="tip-row">Cần mệnh đề độc lập (S + V) để đứng sau "However,"</div>
+  <div class="options-grid">
+    <div class="option correct">
+      <span class="opt-letter">A</span>
+      <div><div class="opt-text">these challenges equip them with essential survival skills</div><div class="opt-viet">những thử thách này trang bị cho họ kỹ năng sống thiết yếu → mệnh đề đầy đủ ✓</div></div>
+      <span class="opt-tag tag-correct">✓ Đáp án</span>
+    </div>
+    <div class="option wrong">
+      <span class="opt-letter">B</span>
+      <div><div class="opt-text">equipping them with essential survival skills</div><div class="opt-viet">cụm phân từ, không phải mệnh đề → thiếu chủ ngữ</div></div>
+      <span class="opt-tag tag-wrong">Loại</span>
+    </div>
+    <div class="option wrong">
+      <span class="opt-letter">C</span>
+      <div><div class="opt-text">to equip them with essential survival skills</div><div class="opt-viet">cụm to-V → không đứng sau dấu phẩy độc lập</div></div>
+      <span class="opt-tag tag-wrong">Loại</span>
+    </div>
+    <div class="option wrong">
+      <span class="opt-letter">D</span>
+      <div><div class="opt-text">which challenges equip them...</div><div class="opt-viet">"which" bắt đầu mệnh đề quan hệ, không độc lập</div></div>
+      <span class="opt-tag tag-wrong">Loại</span>
+    </div>
+  </div>
+  <div class="reason-box">
+    <strong>Sau trạng từ liên kết (However, Therefore...)</strong>
+    Cần mệnh đề độc lập: <strong>S + V + O</strong><br>
+    Không dùng cụm phân từ (Ving/V3) hoặc cụm to-V đứng một mình
+  </div>
+</div>
+
+<!-- Q21 -->
+<div class="question-card" id="q21">
+  <div class="q-header">
+    <span class="q-num">Q·21</span>
+    <div class="q-context">Cấu trúc: <em>"feel proud ___ having contributed"</em> → giới từ sau "proud"</div>
+  </div>
+  <div class="tip-row">be proud OF something/doing = tự hào về điều gì/làm gì</div>
+  <div class="options-grid">
+    <div class="option wrong">
+      <span class="opt-letter">A</span>
+      <div><div class="opt-text">of having contributed to the community</div><div class="opt-viet">tự hào vì đã đóng góp cho cộng đồng → proud of + V-ing ✓</div></div>
+      <span class="opt-tag tag-correct">✓ Đáp án</span>
+    </div>
+    <div class="option wrong">
+      <span class="opt-letter">B</span>
+      <div><div class="opt-text">to have contributed to the community</div><div class="opt-viet">sai giới từ — không dùng "proud to have"</div></div>
+      <span class="opt-tag tag-wrong">Loại</span>
+    </div>
+    <div class="option wrong">
+      <span class="opt-letter">C</span>
+      <div><div class="opt-text">about having contributed...</div><div class="opt-viet">sai — "proud about" không đúng</div></div>
+      <span class="opt-tag tag-wrong">Loại</span>
+    </div>
+    <div class="option wrong">
+      <span class="opt-letter">D</span>
+      <div><div class="opt-text">that they have contributed...</div><div class="opt-viet">sai — "proud that" không đúng</div></div>
+      <span class="opt-tag tag-wrong">Loại</span>
+    </div>
+  </div>
+  <div class="reason-box">
+    <strong>Tính từ + giới từ (Adjective + Preposition)</strong>
+    proud <strong>of</strong> · afraid <strong>of</strong> · good <strong>at</strong> · interested <strong>in</strong> · responsible <strong>for</strong><br>
+    proud of + <strong>having V3</strong> = tự hào vì đã làm gì (trong quá khứ)
+  </div>
+</div>
+
+<!-- Q22 -->
+<div class="question-card" id="q22">
+  <div class="q-header">
+    <span class="q-num">Q·22</span>
+    <div class="q-context">Cấu trúc: <em>"practical soft skills, (22)___"</em> → mệnh đề bổ nghĩa cho "skills" đứng sau dấu phẩy</div>
+  </div>
+  <div class="tip-row">Sau dấu phẩy, bổ nghĩa thêm cho "skills" → mệnh đề quan hệ không xác định với "which"</div>
+  <div class="options-grid">
+    <div class="option correct">
+      <span class="opt-letter">A</span>
+      <div><div class="opt-text">which help them succeed in university life later</div><div class="opt-viet">mà (những kỹ năng này) giúp họ thành công → mệnh đề quan hệ không xác định ✓</div></div>
+      <span class="opt-tag tag-correct">✓ Đáp án</span>
+    </div>
+    <div class="option wrong">
+      <span class="opt-letter">B</span>
+      <div><div class="opt-text">they help them succeed...</div><div class="opt-viet">2 mệnh đề độc lập không có liên từ → sai</div></div>
+      <span class="opt-tag tag-wrong">Loại</span>
+    </div>
+    <div class="option wrong">
+      <span class="opt-letter">C</span>
+      <div><div class="opt-text">to help them succeed...</div><div class="opt-viet">cụm to-V chỉ mục đích, không bổ nghĩa cho danh từ</div></div>
+      <span class="opt-tag tag-wrong">Loại</span>
+    </div>
+    <div class="option wrong">
+      <span class="opt-letter">D</span>
+      <div><div class="opt-text">helped them succeed...</div><div class="opt-viet">thì quá khứ không phù hợp ngữ cảnh hiện tại</div></div>
+      <span class="opt-tag tag-wrong">Loại</span>
+    </div>
+  </div>
+  <div class="reason-box">
+    <strong>Mệnh đề quan hệ không xác định (Non-defining Relative Clause)</strong>
+    N, <strong>which + V...</strong> → thêm thông tin phụ, luôn có dấu phẩy<br>
+    Không dùng "that" sau dấu phẩy trong mệnh đề quan hệ không xác định
+  </div>
+</div>
+```
+
+
+
+</div>
+
+  <div style="text-align:center; padding: 3rem 0 1rem; color: var(--muted); font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase;">
+    Tiếng Anh 11 · Global Success · Phân tích ngữ pháp
+  </div>
+
+</div>
 </body>
 </html>
